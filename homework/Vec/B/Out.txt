@@ -1,0 +1,9 @@
+Vectors and constants used for tests
+vecA =1 2 3
+vecB =4 5 6
+ 
+Test of methodes (part B)
+The dot product of vecA*vecB = 32 (should be equal 32)
+The cross product of vecA x vecB -3 6 -3 (should be equal -3 6 -3)
+The norm of vecA = 3.74165738677394 (should be equal 3.7417)
+Test of ToString on vecA: 1 2 3 (should be equal 1 2 3)
