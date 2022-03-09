@@ -1,0 +1,9 @@
+Vectors and constants used for tests
+vecA =1 2 3
+vecB =1.1 2.2 3.3
+vecC =1 2 3.3
+ 
+Test of methodes (part C)
+Approx of vecA,vecA: True (should be True)
+Approx of vecA,vecB: False (should be False)
+Approx of vecA,vecC: False (should be False)
