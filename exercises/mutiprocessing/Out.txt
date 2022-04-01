@@ -1,0 +1,12 @@
+Calculate without using threads
+harmonic sum from 1 to 10000000 equals 16.6953113658573
+Time: 20 ms
+Calculate using 1 thread
+harmonic sum from 1 to 10000000 equals 16.6953113658573
+Time: 21 ms
+Calculate using 2 threads seperated at 5000000
+harmonic sum from 1 to 10000000 equals 16.6953113658585
+Time: 14 ms
+Calculate using Parallel.For
+harmonic sum from 1 to 10000000 equals 12.9268629521365
+Time: 140 ms
