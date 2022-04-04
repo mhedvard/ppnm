@@ -15,7 +15,7 @@ static class main{
 	}	
 
 	static double lngamma(double x){
-		if(x<=0)
+		if(x<=0) // Not defined for x<=0
 			return 0.0; 
 		double lngamma = (x-1/2)*Log(x)-x+1/2*Log(2*PI);
 		return lngamma;
@@ -23,7 +23,7 @@ static class main{
  
 
 	static void  Main(){
-		for(double x =-5; x<=5; x+=0.01)
+		for(double x =-5; x<=20; x+=0.01)
 			WriteLine($"{x}	{gamma(x)}	{lngamma(x)}");
 	}
 }
