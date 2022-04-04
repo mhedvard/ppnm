@@ -1,0 +1,11 @@
+# Setup plot 
+set terminal png
+
+set xlabel "x"
+set ylabel "gamma(x)"
+set title "Gamma function"
+set output 'plot.png'
+
+
+# Make plot
+plot 'gamma_val.dat' with line title "gamma(x)", 'tabval.dat' with points pointtype 3 title "table values"
