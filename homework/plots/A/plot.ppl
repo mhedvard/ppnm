@@ -8,4 +8,4 @@ set output 'plot.png'
 
 
 # Make plot
-plot 'erf_val.dat' with line title "erf(x)", 'tabval.dat' with points pointtype 2 title "table values"
+plot 'erf_val.dat' with line title "erf(x)", 'tabval.dat' with points pointtype 3 title "table values"
