@@ -7,7 +7,7 @@ set title "Gamma function"
 set grid
 
 set xrange [0:20]
-set yrange [-5:5]
+set yrange [-5:40]
 
 set output 'plot_lngamma.png'
 
