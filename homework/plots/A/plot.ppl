@@ -1,0 +1,5 @@
+# Setup plot 
+set terminal png
+
+# Make plot
+plot 'erf_val.dat', 'tabval.dat' with points
