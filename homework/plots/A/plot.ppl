@@ -1,5 +1,11 @@
 # Setup plot 
 set terminal png
 
+set xlabel "x"
+set ylabel "erf(x)"
+set title "Error function"
+set output 'plot.png'
+
+
 # Make plot
-plot 'erf_val.dat', 'tabval.dat' with points
+plot 'erf_val.dat' with line title "erf(x)", 'tabval.dat' with points title "table values"
