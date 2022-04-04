@@ -13,4 +13,4 @@ set output 'plot_lngamma.png'
 
 
 # Make plot
-plot 'gamma_val.dat' using 2:3 index 501 with line title "lngamma(x)", 'tabval.dat' using 2:3 index 501 with points pointtype 3 title "table values"
+plot 'gamma_val.dat' using 1:3 with line title "lngamma(x)", 'tabval.dat' using 1:3 with points pointtype 3 title "table values"

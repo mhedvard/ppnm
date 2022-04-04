@@ -15,6 +15,8 @@ static class main{
 	}	
 
 	static double lngamma(double x){
+		if(x<=0)
+			return 0.0; 
 		double lngamma = (x-1/2)*Log(x)-x+1/2*Log(2*PI);
 		return lngamma;
 	}
