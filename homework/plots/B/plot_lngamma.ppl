@@ -1,0 +1,16 @@
+# Setup plot 
+set terminal png
+
+set xlabel "x"
+set ylabel "gamma(x)"
+set title "Gamma function"
+set grid
+
+set xrange [0:5]
+set yrange [-5:5]
+
+set output 'plot_lngamma.png'
+
+
+# Make plot
+plot 'gamma_val.dat' using 2:3 index 501 with line title "lngamma(x)", 'tabval.dat' using 2:3 index 501 with points pointtype 3 title "table values"

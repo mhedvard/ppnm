@@ -12,10 +12,16 @@ static class main{
 	
 		double lngamma=x*Log(x+1/(12*x-1/x/10))-x+Log(2*PI/x)/2;
 		return Exp(lngamma);
-	} 
+	}	
+
+	static double lngamma(double x){
+		double lngamma = (x-1/2)*Log(x)-x+1/2*Log(2*PI);
+		return lngamma;
+	}
+ 
 
 	static void  Main(){
 		for(double x =-5; x<=5; x+=0.01)
-			WriteLine($"{x}	{gamma(x)}");
+			WriteLine($"{x}	{gamma(x)}	{lngamma(x)}");
 	}
 }
