@@ -4,6 +4,10 @@ set terminal png
 set xlabel "x"
 set ylabel "gamma(x)"
 set title "Gamma function"
+
+set xrange [-5:5]
+set yrange [-10:10]
+
 set output 'plot.png'
 
 
