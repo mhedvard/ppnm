@@ -28,7 +28,7 @@ This reprecentation only uses which only uses multiplications and divisions.
 
 
 \section{Implementation}
-The inplementation is made in c\#.
+The inplementation is made in C\#.
 The implematation of the power function reprecentation are done in the following way: 
 
 \begin{lstlisting}
@@ -46,8 +46,7 @@ if $x>1/8$ the function the function calls itself but with a smaller agument, wi
 At last if $0<=x<=1/8$ then a revritten version of the power function repecentation of the exponential function is called. 
 
 \section{Results}
-In figure ~(\ref{fig:ex_plot}) are plottet trogether with results from the power function reprecentation equation 
-~(\ref{eq:pow}). 
+In figure~(\ref{fig:ex_plot}) are plottet trogether with results from the power function reprecentation equation~(\ref{eq:pow}). 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{ex_plot.png}
