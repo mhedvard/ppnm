@@ -1,0 +1,11 @@
+# Setup plot 
+set terminal png
+
+set xlabel "x"
+set ylabel "exp(x)"
+set title "Exponential function"
+set output 'ex_plot.png'
+
+
+# Make plot
+plot exp(x) with line title "exp(x)", 'ex.dat' with points pointtype 3 title "from power function"

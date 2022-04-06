@@ -1,4 +1,4 @@
-\documentclass[twocolum, a4paper]{article}
+\documentclass[twocolums, a4paper]{article}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{hyperref}
@@ -6,7 +6,7 @@
 \begin{document}
 \title{Exponetial function}
 \author{Michelle}
-\date{today}
+\date{\today}
 
 \maketitle
 
@@ -22,7 +22,8 @@ The exponential function normally denoted as:
 
 The exponential function can be reperecented using a power series \footnote{\url{https://en.wikipedia.org/wiki/Exponential_function}}: 
 \begin{equation}
-e^x = sum_{k = 0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \cdots .
+e^x = \sum_{k = 0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \cdots .
+\label{eq:ref}
 \end{equation}
 This reprecentation only uses which only uses multiplications and divisions.
 
@@ -33,14 +34,26 @@ The implematation of the power function reprecentation are done in the following
 
 \begin{lstlisting}
 static double ex(double x){
-	if(x<0)return 1/ex(-x);
-	if(x>1.0/8)return Pow(ex(x/2),2); 
-	return 1+x*(1+x/2*(1+x/3*(1+x/4*(1+x/5*(1+x/6*(1+x/7*(1+x/8*(1+x/9*(1+x/10)))))))));
+	if(x<0)
+		return 1/ex(-x);
+	if(x>1.0/8)
+		return Pow(ex(x/2),2); 
+	return 1+x*(1+x/2*(1+x/3*(1+x/4*(1+x/5*(1+x/6*
+	(1+x/7*(1+x/8*(1+x/9*(1+x/10)))))))));
 }
 \end{lstlisting}
 Starting from the top, if the $x<0$ the the function call itself but now rewritten using a positive value of x. 
 if $x>1/8$ the function the function calls itself but with a smaller agument, wich is $x/2$, wich gives an better accuricy. To account for halving the agument, the the result from the expomential equation is squared.
 At last if $0<=x<=1/8$ then a revritten version of the power function repecentation of the exponential function is called. 
 
- 
+\section{Results}
+In figre \ref{fig:ex_plot} are plottet trogether with results from the power function reprecentation equation \ref{eq:pow}. 
+\begin{figure}
+	\caption{Exponential function plottet togeter with the power funtion reprecentation.}
+	\label{fig:ex_plot}
+	\centering
+	\includegraphics[width=1\textwidth]{ex_plot.png}
+\end{figure}
+
+
 \end{document}
