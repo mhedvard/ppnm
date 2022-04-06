@@ -1,4 +1,4 @@
-\documentclass[twocolumn, a4paper]{article}
+\documentclass[a4paper]{article}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{hyperref}
