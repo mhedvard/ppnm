@@ -6,4 +6,4 @@ set output 'plot.png'
 
 
 # Make plot
-plot 'results.dat' using 1:2 with line color blue title "theta", 'results.dat' using 1:3 with line color green title "omega"
+plot 'results.dat' using 1:2 with line color blue title "theta(t)", 'results.dat' using 1:3 with line color green title "omega(t)"
