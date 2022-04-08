@@ -24,7 +24,7 @@ class main{
 		vector yend = ode.ivp(f, t0, y0, tend, xlist, ylist); 
 		
 		for(int i = 0; i < xlist.Count; i++)
-			WriteLine($"{xlist[i]}	{ylist[i][0]}	{ylist[i][0]}");
+			WriteLine($"{xlist[i]}	{ylist[i][0]}	{ylist[i][1]}");
 		
 	}
 
