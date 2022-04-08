@@ -1,0 +1,2 @@
+The result for int(ln(x)/sqrt(x))dx from 0 to 1: -4.00000003748836.
+The exact value is: -4
