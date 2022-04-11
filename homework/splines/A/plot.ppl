@@ -6,8 +6,8 @@ set output 'plot.png'
 
 
 # Make plot
-plot 'results.dat' index 0 with line title "y(x) from linear interpolation"
-plot 'results.dat' index 1 using 1:2 title "yi(xi) from points"
-plot 'results.dat' index 1 using 1:3 with line title "int(y) from linear interpolation"
+plot 'results.dat' index 0 with line title "y(x) from linear interpolation", \
+'results.dat' index 1 using 1:2 title "yi(xi) from points", \
+'results.dat' index 1 using 1:3 with line title "int(y) from linear interpolation"
 
 
