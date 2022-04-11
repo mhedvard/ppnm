@@ -6,7 +6,7 @@ using static linterp;
 
 class main{
 	static void Main(){
-		double[] x = {1,2,4,5,6,7}; 
+		double[] x = {1,2,3,4,5,6,7}; 
 		double[] y = {0,1,2,0,-2,-1,0};
 		
 		for(int i = 0; i < x.Length; i++)
