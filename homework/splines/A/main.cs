@@ -6,8 +6,8 @@ using static linterp;
 
 class main{
 	static void Main(){
-		double[] x = {1,3,5,7,11,25,30}; 
-		double[] y = {1,5,7,4,-5,-8,3};
+		double[] x = {1,2,4,5,6,7,8,9}; 
+		double[] y = {0,1,1,0,-1,-2,-1,0};
 		
 		for(int i = 0; i < x.Length; i++)
 			WriteLine($"{x[i]}	{y[i]}"); 
