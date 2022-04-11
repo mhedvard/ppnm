@@ -8,6 +8,6 @@ set output 'plot.png'
 # Make plot
 plot 'results.dat' index 0 title "yi(xi), data points", \
 'results.dat' index 1 using 1:2 with line title "y(x), linear spline", \
-'results.dat' index 1 using 1:3 with line title "int(y) from x0 to x, linear spline"
+'results.dat' index 1 using 1:3 with line title "int(y) from x0 to x"
 
 
