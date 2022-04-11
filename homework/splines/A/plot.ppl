@@ -1,0 +1,10 @@
+# Setup plot 
+set terminal png
+
+set xlabel "x"
+set output 'plot.png'
+
+
+# Make plot
+plot 'results.dat' using 1:2 with line color blue title "y(x) from linear interpolation"
+
