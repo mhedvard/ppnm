@@ -80,7 +80,7 @@ public class qspline {
 		return i; 
 	}
 	double partint(int i, double z){
-		return (z-x[i])/6*(2*c[i]*Pow(z,2)-4*c[i]*z*x[i]+2*c[i]*Pow(x[i],2)+2*b[i]*(z-x[i])+6*y[i]);
+		return (z-x[i])/6*(2*c[i]*Pow(z,2)-4*c[i]*z*x[i]+2*c[i]*Pow(x[i],2)+3*b[i]*(z-x[i])+6*y[i]);
 	}
 
 }
