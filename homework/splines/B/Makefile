@@ -2,7 +2,7 @@ plot.png:plot.ppl result.dat
 	pyxplot $<
 
 result.dat:main.exe
-	mono main.exe > result.dat
+	mono main.exe > result.dat bcval.txt
 
 
 main.exe:main.cs qspline.dll

@@ -8,7 +8,7 @@ class main{
 		var y = new double[5];
 
 		for(int i = 0; i < x.Length; i++){
-			x[i] = i;
+			x[i] = i+1;
 			y[i] = 1;	
 			WriteLine($"{x[i]}	{y[i]}");
 		} 
@@ -18,7 +18,7 @@ class main{
 		calspline(x,y);
 
 		for(int i = 0; i < x.Length; i++){
-			x[i] = i;
+			x[i] = i+1;
 			y[i] = x[i];	
 			WriteLine($"{x[i]}	{y[i]}");
 		} 
@@ -28,7 +28,7 @@ class main{
 		calspline(x,y);
 
 		for(int i = 0; i < x.Length; i++){
-			x[i] = i;
+			x[i] = i+1;
 			y[i] = Pow(x[i],2);	
 			WriteLine($"{x[i]}	{y[i]}");
 		} 

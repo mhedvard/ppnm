@@ -19,11 +19,28 @@ public class qspline {
 			p[i] = (y[i+1]-y[i])/dx[i]; //dydx
 		}	
 		
-		b[0] = p[0] - c[0] *dx[0];
+
 		for(int i = 0; i < (x.Length-2); i++){
 			c[i+1] = 1/dx[i+1]*(p[i+1]-p[i]-c[i]*dx[i]);
+		}
+
+		c[x.Length-2]/=2;
+		for(int i = x.Length-3; i >= 0; i--){
+			c[i] = 1/dx[i]*(p[i+1]-p[i]-c[i+1]*dx[i+1]); 
+		}
+
+		b[0] = p[0] - c[0] *dx[0];
+		for(int i = 0; i < (x.Length-2); i++){
 			b[i+1] = p[i+1] - c[i+1] *dx[i+1]; 
 		}
+		
+		// Write out b, c values to file
+		var WriteBCval = new System.IO.StreamWriter("bcval.txt", append:true);
+		WriteBCval.WriteLine("b	c	p");	
+		for(int i = 0; i<(x.Length-1);i++)
+			WriteBCval.WriteLine($"{b[i]}	{c[i]}	{p[i]}");
+		WriteBCval.WriteLine("");
+		WriteBCval.Close();
 	}
 	
 	public double spline(double z){
