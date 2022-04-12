@@ -71,7 +71,7 @@ public class qspline {
 
 	public double derivative(double z){
 		int i = binsearch(z); 
-		return b[i] +2 * c[i] *(z-x[i]);	
+		return b[i] +2 * c[i] *(z-x[i]) + 3 * d[i] * Pow(z-x[i],2);	
 	}
 
 
@@ -100,7 +100,7 @@ public class qspline {
 		return i; 
 	}
 	double partint(int i, double z){
-		return (z-x[i])/6*(2*c[i]*Pow(z,2)-4*c[i]*z*x[i]+2*c[i]*Pow(x[i],2)+3*b[i]*(z-x[i])+6*y[i]);
+		return (z-x[i])/12*(12*y[i] + 6*b[i]*(z-x[i]) + 4*c[i]*Pow(z-x[i],2) + 3*d[i] *(Pow(z,3)-3*x[i]*Pow(z,2) + 3*z*Pow(x[i],2) -Pow(x[i],3)));
 	}
 
 }
