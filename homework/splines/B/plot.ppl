@@ -2,7 +2,7 @@
 set terminal png
 
 set xlabel "x"
-
+set grid 
 
 
 # Make plot 1
