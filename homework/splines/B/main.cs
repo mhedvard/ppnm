@@ -42,23 +42,9 @@ class main{
 	static void calspline(double[] x,double[] y){
 		var qs = new qspline(x,y);
 		for(double z = x[0]; z<= x[x.Length-1]; z+=0.1)
-			WriteLine($" {z}	{qs.spline(z)}");
-
+			WriteLine($" {z}	{qs.spline(z)}	{qs.derivative(z)}	{qs.integral(z)}"	);
 		WriteLine("");
 		WriteLine("");
-
-		for(double z = x[0]; z<= x[x.Length-1]; z+=0.1)
-			WriteLine($" {z}	{qs.derivative(z)}");
-
-		WriteLine("");
-		WriteLine("");
-
-		for(double z = x[0]; z<= x[x.Length-1]; z+=0.1)
-			WriteLine($" {z}	{qs.integral(z)}");
-
-		WriteLine("");
-		WriteLine("");
-
 	}
 
 }
