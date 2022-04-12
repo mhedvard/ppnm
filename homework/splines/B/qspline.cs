@@ -32,8 +32,16 @@ public class qspline {
 	}
 
 
-	//public double derivative(double z){/* evaluate the derivative */}
-	//public double integral(double z){/* evaluate the integral */}
+	public double derivative(double z){
+		int i = binsearch(z); 
+		return b[i] +2 * c[i] *(z-x[i]);	
+	}
+
+
+	public double integral(double z){
+		int i = binsearch(z); 
+		return (z-x[0])/6*(2*c[i]*(Pow(z,2)+x[0]*z+Pow(x[0],2)) + 6*c[i]*(Pow(x[i],2)-x[0]*x[i]-z*x[i]) +3*b[i]*(z+x[0]-2*x[i]) +6 *y[i]) ;
+	}
 
 	int binsearch(double z){
 		/*Locate the idenx i for which x_i<=z<=x_(i+1)*/
