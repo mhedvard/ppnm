@@ -37,6 +37,17 @@ class main{
 
 		calspline(x,y);
 
+
+		for(int i = 0; i < x.Length; i++){
+			x[i] = i+1;
+			y[i] = Pow(x[i],3);	
+			WriteLine($"{x[i]}	{y[i]}");
+		} 
+		WriteLine("");
+		WriteLine("");
+
+		calspline(x,y);
+
 	}
 
 	static void calspline(double[] x,double[] y){
