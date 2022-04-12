@@ -2,13 +2,31 @@
 set terminal png
 
 set xlabel "x"
-set output 'plot.png'
 
 
-# Make plot
-plot 'result.dat' index 0 title "yi(xi), data points", \
+
+# Make plot 1
+set output 'plot_1.png'
+plot 'result.dat' index 0 title "yi=1, data points", \
 'result.dat' index 1 using 1:2 with line title "y(x), quadratic spline",\
-'result.dat' index 1 using 1:3 with line title "dy/dx(x)",\
-'result.dat' index 1 using 1:4 with line title "int(y(x)) from x0 to x"
+'result.dat' index 1 using 1:3 with line title "deriviate",\
+'result.dat' index 1 using 1:4 with line title "integral from x0 to x"
+
+
+# Make plot 2
+set output 'plot_2.png'
+plot 'result.dat' index 2 title "yi=xi, data points", \
+'result.dat' index 3 using 1:2 with line title "y(x), quadratic spline",\
+'result.dat' index 3 using 1:3 with line title "deriviate",\
+'result.dat' index 3 using 1:4 with line title "integral from x0 to x"
+
+
+# Make plot 3
+set output 'plot_3.png'
+plot 'result.dat' index 4 title "yi=xi*xi, data points", \
+'result.dat' index 5 using 1:2 with line title "y(x), quadratic spline",\
+'result.dat' index 5 using 1:3 with line title "deriviate",\
+'result.dat' index 5 using 1:4 with line title "integral from x0 to x"
+
 
 
