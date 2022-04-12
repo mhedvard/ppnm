@@ -1,7 +1,7 @@
 plot.png:plot.ppl result.dat
 	pyxplot $<
 
-results.dat:main.exe
+result.dat:main.exe
 	mono main.exe > result.dat
 
 

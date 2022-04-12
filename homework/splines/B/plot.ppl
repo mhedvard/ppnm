@@ -7,7 +7,7 @@ set output 'plot.png'
 
 # Make plot
 plot 'result.dat' index 0 title "yi(xi), data points", \
-'result.dat' index 1 using 1:2 with line title "y(x), linear spline"
+'result.dat' index 1 using 1:2 with line title "y(x), quadratic spline"
 
 
 

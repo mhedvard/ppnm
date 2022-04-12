@@ -14,14 +14,15 @@ public class qspline {
 		var p = new  double[x.Length-1];
 		c[0] = 0;
 
-		for(int i = 0; i < (x.Length-2); i++){
+		for(int i = 0; i < (x.Length-1); i++){
 			dx[i] = x[i+1]-x[i];
 			p[i] = (y[i+1]-y[i])/dx[i]; //dydx
 		}	
 		
+		b[0] = p[0] - c[0] *dx[0];
 		for(int i = 0; i < (x.Length-2); i++){
 			c[i+1] = 1/dx[i+1]*(p[i+1]-p[i]-c[i]*dx[i]);
-			b[i] = p[i] - c[i] *dx[i]; 
+			b[i+1] = p[i+1] - c[i+1] *dx[i+1]; 
 		}
 	}
 	
