@@ -39,8 +39,12 @@ public class qspline {
 
 
 	public double integral(double z){
-		int i = binsearch(z); 
-		return (z-x[0])/6*(2*c[i]*(Pow(z,2)+x[0]*z+Pow(x[0],2)) + 6*c[i]*(Pow(x[i],2)-x[0]*x[i]-z*x[i]) +3*b[i]*(z+x[0]-2*x[i]) +6 *y[i]) ;
+		int j = binsearch(z); 
+		double val = 0; 
+		for(int i = 0; i < j; i++)
+			val +=  partint(i,x[i+1]);
+		val +=  partint(j,z);
+		return val;
 	}
 
 	int binsearch(double z){
@@ -57,6 +61,9 @@ public class qspline {
 			else j = m; 
 		}
 		return i; 
+	}
+	double partint(int i, double z){
+		return (z-x[i])/6*(2*c[i]*Pow(z,2)-4*c[i]*z*x[i]+2*c[i]*Pow(x[i],2)+2*b[i]*(z-x[i])+6*y[i]);
 	}
 
 }
