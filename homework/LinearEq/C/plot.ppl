@@ -1,0 +1,10 @@
+# Setup plot 
+set terminal png
+
+set xlabel "N"
+set output 'plot.png'
+
+
+# Make plot
+plot 'results.dat' title "Data points", \
+pow(x,3) with line title """y(x)=x\^3"""
