@@ -7,7 +7,7 @@ class main{
 	static void Main(){
 		var watch = new Stopwatch();
 		Random rnd = new Random(); 
-		for(int n=50; n<750; n+=50){
+		for(int n=20; n<1000; n+=20){
 			matrix A = new matrix(n,n); 
 			watch.Restart();
 				for(int i=0; i<n; i++)
