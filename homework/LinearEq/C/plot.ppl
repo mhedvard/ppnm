@@ -2,9 +2,13 @@
 set terminal png
 
 set xlabel "N"
-set output 'plot.png'
+set ylabel "Time"
+set output 'Plot.png'
 
+# Make fit 
+f(x) = A*pow(x,3)
+fit f() 'results.dat' via A
 
 # Make plot
 plot 'results.dat' title "Data points", \
-pow(x,3) with line title """y(x)=x\^3"""
+f(x) with line title "fit A*pow(x,3)"
