@@ -31,7 +31,7 @@ class main{
 
 		var dc = new vector(c.size);
 		for(int i=0; i<c.size; i++)
-			dc[i] = Sqrt(cov[i,i]*cov[i,i]);	
+			dc[i] = Sqrt(cov[i,i]);	
 
 		var aLim = new vector(new double[] {Exp(c[0]-dc[0]), Exp(c[0]+dc[0])});
 		var lambdaLim = new vector(new double[] {c[1]-dc[1], c[1]+dc[1]});
@@ -59,8 +59,13 @@ class main{
 		WriteLine("");
 		WriteLine($"{t05data}	{t05min}	{t05max}	{t05exact}	{0}");
 		WriteLine($"{t05data}	{t05min}	{t05max}	{t05exact}	{150}");
+
+		WriteLine("");
+		WriteLine("");
 		
 		
-		
+		c.print(); 
+		dc.print(); 
+		cov.print();
 	}
 }
