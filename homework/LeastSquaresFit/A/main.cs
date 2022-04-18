@@ -27,6 +27,9 @@ class main{
 		double a = Exp(ls.c[0]);
 		double lambda = c[1];
 
+		// Half-life time 
+		double t05data = Log(2)/lambda;
+		double t05exact = 3.6;
 		// Write data to file
 		for(int i=0; i<t.size; i++){
 			WriteLine($"{t[i]}	{y[i]}	{dy[i]}");
@@ -38,6 +41,13 @@ class main{
 		for(double time=t[0]; time <= t[t.size-1]; time+=0.1){
 			WriteLine($"{time}	{a*Exp(-lambda*time)}");
 		}
+
+		WriteLine("");
+		WriteLine("");
+		WriteLine($"{0} {t05data}	{t05exact}");
+		WriteLine($"{150} {t05data}	{t05exact}");
+		
+		
 		
 	}
 }
