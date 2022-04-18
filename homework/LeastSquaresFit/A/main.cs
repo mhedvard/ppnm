@@ -44,8 +44,8 @@ class main{
 
 		WriteLine("");
 		WriteLine("");
-		WriteLine($"{0} {t05data}	{t05exact}");
-		WriteLine($"{150} {t05data}	{t05exact}");
+		WriteLine($"{t05data}	{t05exact}	{0}");
+		WriteLine($"{t05data}	{t05exact}	{150}");
 		
 		
 		
