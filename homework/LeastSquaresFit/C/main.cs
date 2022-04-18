@@ -38,8 +38,8 @@ class main{
 		
 		// Half-life time 
 		double t05data = Log(2)/lambda;
-		double t05min = Log(2)/lambdaLim[1]; 
-		double t05max = Log(2)/lambdaLim[0]; 
+		double t05min = Log(2)/lambdaLim[0]; 
+		double t05max = Log(2)/lambdaLim[1]; 
 		double t05exact = 3.6;
 
 
@@ -52,7 +52,7 @@ class main{
 		WriteLine("");
 
 		for(double time=t[0]; time <= t[t.size-1]; time+=0.1){
-			WriteLine($"{time}	{a*Exp(-lambda*time)}");
+			WriteLine($"{time}	{a*Exp(-lambda*time)}	{aLim[0]*Exp(-lambdaLim[1]*time)}	{aLim[1]*Exp(-lambdaLim[1]*time)}");
 		}
 
 		WriteLine("");
@@ -62,16 +62,6 @@ class main{
 
 		WriteLine("");
 		WriteLine("");
-
-
-		// T05 textfile
-		var T05_file = new System.IO.StreamWriter("T05.txt", append:true);
-		T05_file.WriteLine("Half-Life time of ThX");
-		T05_file.WriteLine("");
-		T05_file.WriteLine($"Modern value: {t05exact}");
-		T05_file.WriteLine($"Calculated value: {t05data}");
-		T05_file.WriteLine($"Calculated Limits: [{t05min} {t05max}]");
-		T05_file.WriteLine($"Modern value does not agree with the calculated limit");
-		T05_file.Close();
+		
 	}
 }
