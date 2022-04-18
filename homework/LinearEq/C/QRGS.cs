@@ -38,7 +38,7 @@ public class QRGS{
 		int n = Q.size1; 
 		int m = Q.size2;
 		var B = new matrix(m,n);
-		var I = id(m); 
+		var I = id(n); 
 		for(int i = 0; i<n; i++)
 			B[i] = solve(I[i]);
 		return B;
