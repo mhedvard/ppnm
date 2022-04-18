@@ -9,5 +9,5 @@ set grid
 # Make plot
 plot 'results.dat' with yerrorbars index 0 using 1:2:3 title "Data",\
 'results.dat' index 1 using 1:2  with lines title "LS Fit",\
-'results.dat' index 2 using 1:3  with lines title "Half-life time (Expected)",\
-'results.dat' index 2 using 2:3  with lines title "Half-life time (Data)"
+'results.dat' index 2 using 1:3  with lines title "Half-life time (Data)",\
+'results.dat' index 2 using 2:3  with lines title "Half-life time (Expected)"
