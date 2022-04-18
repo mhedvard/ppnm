@@ -1,0 +1,10 @@
+# Setup plot 
+set terminal png
+
+set xlabel "Time (days)"
+set ylabel "Activity of ThX (relativ units)"
+set output 'Plot.png'
+
+# Make plot
+plot 'results.dat' with yerrorbars index 0 using 1:2:3 title "Data",\
+'results.dat' index 1 using 1:2  with lines title "LS Fit"
