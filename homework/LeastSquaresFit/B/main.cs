@@ -63,9 +63,5 @@ class main{
 		WriteLine("");
 		WriteLine("");
 		
-		
-		c.print(); 
-		dc.print(); 
-		cov.print();
 	}
 }
