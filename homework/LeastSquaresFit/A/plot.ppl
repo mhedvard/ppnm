@@ -4,6 +4,7 @@ set terminal png
 set xlabel "Time (days)"
 set ylabel "Activity of ThX (relativ units)"
 set output 'Plot.png'
+set grid
 
 # Make plot
 plot 'results.dat' with yerrorbars index 0 using 1:2:3 title "Data",\
