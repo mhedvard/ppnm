@@ -1,0 +1,36 @@
+Matrix used for the test
+         0          8          3 
+         8          3          6 
+         3          6          9 
+
+Eigenvalues e =      15.9       2.91      -6.81 
+
+Orthogonal matrix of eigenvectors V = 
+     0.424     -0.529      0.735 
+     0.584      -0.46     -0.669 
+     0.692      0.713      0.114 
+
+Diagonal matrix with the corresponding eigenvalues D = 
+      15.9          0          0 
+         0       2.91          0 
+         0          0      -6.81 
+
+Test: V^TAV=D:
+      15.9          0  -6.66e-16 
+     2e-15       2.91   4.44e-16 
+ -3.33e-16   5.55e-16      -6.81 
+
+Test: VDV^T=A:
+  2.66e-15          8          3 
+         8          3          6 
+         3          6          9 
+Test: V^TV=I:
+
+         1   1.67e-16  -1.39e-17 
+  1.67e-16          1   5.55e-17 
+ -1.39e-17   5.55e-17          1 
+
+Test: VV^T=I:
+         1   5.55e-17  -1.39e-17 
+  5.55e-17          1   8.33e-17 
+ -1.39e-17   8.33e-17          1 
