@@ -8,10 +8,8 @@ class main{
 		StreamWriter sw_dr = new StreamWriter("drConv.dat");
 		for(int npoints = 10; npoints<100; npoints++){
 			double rmax = 100;
-	//		int npoints = 20;
 			double dr = rmax/npoints;
-
-	//		double rmax = 10; 
+ 
 			var H = hem(rmax,npoints);
 			H.print("\n Matrix H \n"); 
 			// Diagonalize the matrix using your Jacobi routine

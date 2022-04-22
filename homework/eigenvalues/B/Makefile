@@ -1,5 +1,5 @@
-#drConv.png:plot.ppl drConv.dat rmaxConv.dat
-#	pyxplot $<
+drConv.png:plot.ppl drConv.dat rmaxConv.dat
+	pyxplot $<
 
 Out.txt drConv.dat rmaxConv.dat:main.exe
 	mono main.exe > Out.txt
