@@ -1,7 +1,7 @@
-drConv.png:plot.ppl drConv.dat rmaxConv.dat
+drConv.png:plot.ppl drConv.dat rmaxConv.dat eigFunc.dat
 	pyxplot $<
 
-Out.txt drConv.dat rmaxConv.dat:main.exe
+Out.txt drConv.dat rmaxConv.dat eigFunc.dat:main.exe
 	mono main.exe > Out.txt
 
 main.exe:main.cs matrix.dll jacobi.dll vector.dll

@@ -36,3 +36,22 @@ plot 'rmaxConv.dat' using 1:2 with color black title "Energy 0",\
 'rmaxConv.dat' using 1:7 with line color blue title "Energy 2, Analytical"
 
 
+# Setup plot eigenfunctions 
+set terminal png
+
+set xlabel "R"
+set ylabel "Energy"
+set output 'EigFunc.png'
+set title "Figenfunctions"
+set yrange [-1:1]
+set grid
+
+# Make plot
+plot 'eigFunc.dat' using 1:2 index 1 with color black title "E0",\
+'eigFunc.dat' using 1:3 index 0 with color red title "E1",\
+'eigFunc.dat' using 1:4 index 0 with color blue title "E2",\
+'eigFunc.dat' using 1:2 index 1 with line color black title "E0, Analytical",\
+'eigFunc.dat' using 1:3 index 1 with line color red title "E1, Analytical",\
+'eigFunc.dat' using 1:4 index 1 with line color blue title "E2, Analytical"
+
+

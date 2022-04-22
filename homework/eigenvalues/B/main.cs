@@ -23,7 +23,7 @@ class main{
 
 	// Investigate convergence of your energies with respect to rmax.
 		StreamWriter sw_rmax = new StreamWriter("rmaxConv.dat");
-		for(double rmax = 1; rmax<20; rmax+=2){
+		for(double rmax = 1; rmax<30; rmax+=2){
 			double dr = 0.2;
 			int npoints = (int) (rmax/dr)-1; 
 			var H = hem(rmax,npoints);
@@ -32,6 +32,38 @@ class main{
 			sw_rmax.WriteLine($"{rmax}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055");
 		}
 		sw_rmax.Close();
+
+
+
+	// Plot the several lowest eigenfunctions and compare with the analytical result..
+		StreamWriter sw_eigF = new StreamWriter("eigFunc.dat");
+		double rmax1 = 30; 
+		double dr1 = 0.2; 
+		int npoints1 = (int) (rmax1/dr1)-1;
+		vector r1 = new vector(npoints1);
+		for(int i=0;i< npoints1;i++)
+			r1[i]=dr1*(i+1); 
+		matrix H1 = hem(rmax1,npoints1);
+		// Diagonalize the matrix using your Jacobi routine
+		(vector eig1, matrix V1) = jacobi.cyclic(H1);
+
+
+		for(int i=0; i<r1.size; i++)
+			sw_eigF.WriteLine($"{r1[i]} {V1[0][i]*1.0/Sqrt(dr1)} {-V1[1][i]*1.0/Sqrt(dr1)} {-V1[2][i]*1.0/Sqrt(dr1)}");
+		
+		
+		sw_eigF.WriteLine($"");
+		sw_eigF.WriteLine($"");
+		//Analytical result
+		for(double x=0; x<rmax1; x+=0.01){
+			double R1 = x*2*Exp(-x);
+			double R2 = x*1.0/Sqrt(2)*(1-1.0/2*x)*Exp(-x/2);
+			double R3 = x*2.0/(3*Sqrt(3))*(1-2.0/3*x+2.0/27*x*x)*Exp(-x/3);
+			sw_eigF.WriteLine($"{x} {R1} {R2} {R3}");
+		}
+
+		sw_eigF.Close();
+
 
 	}
 
@@ -50,6 +82,6 @@ class main{
 		H*=-0.5/dr/dr;
 		for(int i=0;i<npoints;i++)
 			H[i,i]+=-1/r[i]; 
-	return H; 
+	return (H); 
 	}
 }
