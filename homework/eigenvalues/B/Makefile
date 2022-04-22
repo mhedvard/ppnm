@@ -1,8 +1,8 @@
-drConv.png:plot.ppl drConv.dat rmaxConv.dat
-	pyxplot $<
+#drConv.png:plot.ppl drConv.dat rmaxConv.dat
+#	pyxplot $<
 
-drConv.dat:main.exe
-	mono main.exe > drConv.dat
+Out.txt drConv.dat rmaxConv.dat:main.exe
+	mono main.exe > Out.txt
 
 main.exe:main.cs matrix.dll jacobi.dll vector.dll
 	mcs -target:exe $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)

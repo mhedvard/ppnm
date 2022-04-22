@@ -6,18 +6,23 @@ class main{
 	static void Main(){
 	// Investigate convergence of your energies with respect to and dr.
 		StreamWriter sw_dr = new StreamWriter("drConv.dat");
-		for(double dr = 0.1; dr<1; dr+=0.1){
-			double rmax = 10; 
-			var H = hem(rmax,dr);
+		for(int npoints = 10; npoints<100; npoints++){
+			double rmax = 100;
+	//		int npoints = 20;
+			double dr = rmax/npoints;
+
+	//		double rmax = 10; 
+			var H = hem(rmax,npoints);
+			H.print("\n Matrix H \n"); 
 			// Diagonalize the matrix using your Jacobi routine
-			matrix V; 
-			vector eig; 
-			(eig,V) = jacobi.cyclic(H);
+			(vector eig, matrix V) = jacobi.cyclic(H);
+			V.print("\n matrix V \n"); 
+			eig.print("\n vector eig \n" ); 
 			sw_dr.WriteLine($"{dr}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055" );
 		}
 		sw_dr.Close();
 
-
+/*
 	// Investigate convergence of your energies with respect to rmax.
 		StreamWriter sw_rmax = new StreamWriter("rmaxConv.dat");
 		for(double rmax = 1; rmax<20; rmax+=2){
@@ -31,10 +36,10 @@ class main{
 			sw_rmax.WriteLine($"{rmax}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055");
 		}
 		sw_rmax.Close();
-	
+*/	
 	}
 
-	static matrix hem(double rmax, double dr){
+	static matrix hem(double rmax, int npoints){
 		/* // Build the Hamiltoanian matrix
 		int N = (int) (rmax/dr)-1;
 		var r = new vector(N); 
@@ -47,9 +52,9 @@ class main{
 			if(i<N-1) H[i,i+1]=-0.5/dr/dr;
 		}
 */
-		int npoints = (int)(rmax/dr-1);
+		double dr = rmax/(npoints+1);
 		vector r = new vector(npoints);
-			for(int i=0;i<npoints;i++)
+		for(int i=0;i< npoints;i++)
 			r[i]=dr*(i+1);
 		matrix H = new matrix(npoints,npoints);
 		for(int i=0;i<npoints-1;i++){
