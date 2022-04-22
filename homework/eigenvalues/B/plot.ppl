@@ -5,6 +5,7 @@ set xlabel "dr"
 set ylabel "Energy"
 set output 'drConv.png'
 set title "Convergence dr"
+set yrange [-1:1]
 set grid
 
 # Make plot
