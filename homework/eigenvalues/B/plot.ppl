@@ -24,6 +24,7 @@ set xlabel "rmax"
 set ylabel "Energy"
 set output 'rmaxConv.png'
 set title "Convergence rmax"
+set yrange [-1:1]
 set grid
 
 # Make plot
