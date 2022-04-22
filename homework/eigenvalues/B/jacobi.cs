@@ -28,8 +28,7 @@ public class jacobi{
 	}	
 
 	static public (vector,matrix) cyclic(matrix A){
-		matrix D = A.copy(); 
-		int n = D.size1;
+		int n = A.size1;
 		var V = matrix.id(n); 
 
 		bool changed;
@@ -55,7 +54,7 @@ public class jacobi{
 		}while(changed);
 		// Convert matrix D to a vector with the eignevalues. 
 		vector eig; 
-		eig = D.diag();
+		eig = A.diag();
 		return (eig,V);
 	} 
 }
