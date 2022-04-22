@@ -14,13 +14,12 @@ class main{
 				A[j,i] = A[i,j];
 			}
 		}
-		
+		matrix D = A.copy(); 		
+
 		A.print("Matrix used for the test");		
 		
 		// Find eigenvalues and vectors
-		vector eig; 
-		matrix V;
-		(eig,V) = jacobi.cyclic(A);
+		(vector eig, matrix V) = jacobi.cyclic(D);
 
 
 		WriteLine(""); 
@@ -28,14 +27,14 @@ class main{
 
 		WriteLine("");
 		V.print("Orthogonal matrix of eigenvectors V = ");
-
-		var D = new matrix(eig);
+		
+		D = new matrix(eig);	
 		WriteLine(""); 
 		D.print("Diagonal matrix with the corresponding eigenvalues D = ");
 
 		//Test
 		WriteLine("");
-		var test1 = V.T*A*V;
+		matrix test1 = V.T*A*V;
 		test1.print("Test: V^TAV=D:");
 
 

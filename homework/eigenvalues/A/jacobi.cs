@@ -16,65 +16,46 @@ public class jacobi{
 	}	
 
 	static void Jtimes(matrix A, int p, int q, double theta){
-		double aip, aiq;
+		double apj, aqj;
 		double c = Cos(theta);
 		double s = Sin(theta);
 		for(int j=0; j<A.size2; j++){
-			aip = A[p,j];
-			aiq = A[q,j];
-			A[p,j]= c*aip + s*aiq;
-			A[q,j]= - s*aip + c*aiq;
+			apj = A[p,j];
+			aqj = A[q,j];
+			A[p,j]= c*apj + s*aqj;
+			A[q,j]= - s*apj + c*aqj;
 		}
 	}	
 
 	static public (vector,matrix) cyclic(matrix A){
-		matrix D = A.copy(); 
-		int n = D.size1;
+		int n = A.size1;
 		var V = matrix.id(n); 
-	
-		
-		double diff = 1;
-		double diag0 = 0;
-		double diag1 = 0;
-		for(int i = 0; i<n; i++)
-			diag1 += Abs(D[i,i]);
-		/* //Alternative convert criterium (snall sum of aff diagonals)
-		double offDiag = 0; 
-		for(int i=0; i<A.size1; i++){
-			for(int j = 0; j< A.size2; j++){
-				if(i!=j)
-					offDiag+=Abs(D[i,j]);
-			}
-		}
-		*/
-		while(diff>1e-6){
-			for( int i = 0; i < n; i++){
-				for(int j=0; j < i; j++){
-					double theta = 0.5*Atan2(2*D[i,j],D[j,j]-D[i,i]);
-					Jtimes(D,i,j,-theta);
-					timesJ(D,i,j,theta);
-					timesJ(V,i,j,theta);
+		V.print("I"); 
+		bool changed;
+		do{
+			changed=false;
+			for(int p=0;p<n-1;p++){
+				for(int q=p+1;q<n;q++){
+					double apq=matrix.get(A,p,q);
+					double app=matrix.get(A,p,p);
+					double aqq=matrix.get(A,q,q);
+					double theta=0.5*Atan2(2*apq,aqq-app);
+					double c=Cos(theta),s=Sin(theta);
+					double new_app=c*c*app-2*s*c*apq+s*s*aqq;
+					double new_aqq=s*s*app+2*s*c*apq+c*c*aqq;
+					if(new_app!=app || new_aqq!=aqq) // do rotation
+					{
+						changed=true;
+						timesJ(A,p,q, theta);
+						Jtimes(A,p,q,-theta); // A←J^T*A*J 
+						timesJ(V,p,q, theta); // V←V*J
+					}		
 				}
 			}
-		/* //Alternative convert criterium (snall sum of aff diagonals)
-			offDiag = 0; 
-			for(int i=0; i<A.size1; i++){
-				for(int j = 0; j< A.size2; j++){
-					if(i!=j)
-						offDiag+=Abs(D[i,j]);
-				}
-			}
-		*/
-			diag0 = diag1; 
-			diag1 = 0;
-			for(int i = 0; i<n; i++)
-				diag1 += Abs(D[i,i]); 
-			diff = Abs(diag1-diag0);
-					
-		}
+		}while(changed);
 		// Convert matrix D to a vector with the eignevalues. 
 		vector eig; 
-		eig = D.diag();
+		eig = A.diag();
 		return (eig,V);
 	} 
 }
