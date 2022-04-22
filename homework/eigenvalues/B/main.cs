@@ -6,23 +6,23 @@ class main{
 	static void Main(){
 	// Investigate convergence of your energies with respect to and dr.
 		StreamWriter sw_dr = new StreamWriter("drConv.dat");
-		for(int N = 10; N<200; N+=5){
-			double rmax = 100; 
-			var H = hem(rmax,N);
+		for(double dr = 0.1; dr<1; dr+=0.1){
+			double rmax = 10; 
+			var H = hem(rmax,dr);
 			// Diagonalize the matrix using your Jacobi routine
 			matrix V; 
 			vector eig; 
 			(eig,V) = jacobi.cyclic(H);
-			sw_dr.WriteLine($"{rmax/(N+1)}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055" );
+			sw_dr.WriteLine($"{dr}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055" );
 		}
 		sw_dr.Close();
 
 
 	// Investigate convergence of your energies with respect to rmax.
 		StreamWriter sw_rmax = new StreamWriter("rmaxConv.dat");
-		for(double rmax = 10; rmax<200; rmax+=5){
-			int N = 100; 
-			var H = hem(rmax,N);
+		for(double rmax = 1; rmax<20; rmax+=2){
+			double dr = 0.2; 
+			var H = hem(rmax,dr);
 			// Diagonalize the matrix using your Jacobi routine
 			matrix V; 
 			vector eig; 
@@ -31,11 +31,12 @@ class main{
 			sw_rmax.WriteLine($"{rmax}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055");
 		}
 		sw_rmax.Close();
+	
 	}
 
-	static matrix hem(double rmax, int N){
+	static matrix hem(double rmax, double dr){
 		// Boild the Hamiltoanian matrix
-		double dr = rmax/(N+1);
+		int N = (int) (rmax/dr)-1;
 		var r = new vector(N); 
 		var H = new matrix(N,N); 
 		for(int i=0;i<N;i++)
