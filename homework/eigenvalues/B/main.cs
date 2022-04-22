@@ -35,7 +35,7 @@ class main{
 	}
 
 	static matrix hem(double rmax, double dr){
-		// Boild the Hamiltoanian matrix
+		/* // Build the Hamiltoanian matrix
 		int N = (int) (rmax/dr)-1;
 		var r = new vector(N); 
 		var H = new matrix(N,N); 
@@ -45,7 +45,23 @@ class main{
 			H[i,i] = 1/dr/dr-1/r[i]; 
 			if(i>0)	H[i,i-1]=- 0.5/dr/dr; 
 			if(i<N-1) H[i,i+1]=-0.5/dr/dr;
-		} 
-		return H; 
+		}
+*/
+
+	int npoints = (int)(rmax/dr)-1;
+	vector r = new vector(npoints);
+	for(int i=0;i<npoints;i++)
+		r[i]=dr*(i+1);
+	matrix H = new matrix(npoints,npoints);
+	for(int i=0;i<npoints-1;i++){
+		matrix.set(H,i,i,-2);
+		matrix.set(H,i,i+1,1);
+		matrix.set(H,i+1,i,1);
+	}
+	matrix.set(H,npoints-1,npoints-1,-2);
+	H*=-0.5/dr/dr;
+	for(int i=0;i<npoints;i++)
+		H[i,i]+=-1/r[i]; 
+	return H; 
 	}
 }
