@@ -6,7 +6,7 @@ class main{
 	static void Main(){
 	// Investigate convergence of your energies with respect to and dr.
 		StreamWriter sw_dr = new StreamWriter("drConv.dat");
-		for(int npoints = 10; npoints<100; npoints+=5){
+		for(int npoints = 50; npoints<150; npoints+=5){
 			double rmax = 30;
 			double dr = rmax/(npoints+1);
  
