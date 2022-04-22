@@ -1,4 +1,4 @@
-drConv.png:plot.ppl drConv.dat
+drConv.png:plot.ppl drConv.dat rmaxConv.dat
 	pyxplot $<
 
 drConv.dat:main.exe
