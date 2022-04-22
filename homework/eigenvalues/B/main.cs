@@ -7,12 +7,11 @@ class main{
 	// Investigate convergence of your energies with respect to and dr.
 		StreamWriter sw_dr = new StreamWriter("drConv.dat");
 		for(int N = 10; N<200; N+=5){
-			double rmax = 10; 
+			double rmax = 100; 
 			var H = hem(rmax,N);
 			// Diagonalize the matrix using your Jacobi routine
 			matrix V; 
 			vector eig; 
-		
 			(eig,V) = jacobi.cyclic(H);
 			sw_dr.WriteLine($"{rmax/(N+1)}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055" );
 		}
