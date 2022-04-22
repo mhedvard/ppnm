@@ -13,7 +13,7 @@ class main{
 			matrix V; 
 			vector eig; 
 			(eig,V) = jacobi.cyclic(H);
-			sw_dr.WriteLine($"{rmax/(N+1)}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055" );
+			sw_dr.WriteLine($"{N}  {eig[0]} {eig[1]} {eig[2]}	-0.5	-0.125	-0.055" );
 		}
 		sw_dr.Close();
 

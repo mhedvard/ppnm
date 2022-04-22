@@ -1,8 +1,8 @@
-Plot.png:plot.ppl drConv.dat
+drConv.png:plot.ppl drConv.dat
 	pyxplot $<
 
-Out.txt:main.exe
-	mono main.exe > Out.txt
+drConv.dat:main.exe
+	mono main.exe > drConv.dat
 
 main.exe:main.cs matrix.dll jacobi.dll vector.dll
 	mcs -target:exe $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
