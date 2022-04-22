@@ -58,7 +58,7 @@ class main{
 		for(double x=0; x<rmax1; x+=0.01){
 			double R1 = x*2*Exp(-x);
 			double R2 = x*1.0/Sqrt(2)*(1-1.0/2*x)*Exp(-x/2);
-			double R3 = x*2.0/(3*Sqrt(3))*(1-2.0/3*x+2.0/27*x*x)*Exp(-x/3);
+			double R3 = - x*2.0/(3*Sqrt(3))*(1-2.0/3*x+2.0/27*x*x)*Exp(-x/3);
 			sw_eigF.WriteLine($"{x} {R1} {R2} {R3}");
 		}
 
