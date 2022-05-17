@@ -39,7 +39,6 @@ class main{
 		vector y0 = new vector(PI-0.1,0);				
 
 		vector solStep; 
-		matrix solMat = new matrix(imax,3); 
 
 		StreamWriter PendRes = new StreamWriter("PendRes.dat"); 
 		PendRes.WriteLine($" {t0} {y0[0]} {y0[1]}"); 
