@@ -1,0 +1,5 @@
+Test of routines by solving u''=u from 0 to 1 where u0=[1,1]
+      1.38     -0.302 
+Result from matlab using ode45: 1.3818, -0.3012
+Test OK
+

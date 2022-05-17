@@ -1,0 +1,12 @@
+# Setup plot occialtion 
+set terminal png
+
+set xlabel "Time t"
+set title "Oscillator with friction" 
+set output 'Occilation_Pendulum.png'
+set grid
+
+# Make plot
+plot 'PendRes.dat' using 1:2 with lines color blue title "theta(t)",\
+'PendRes.dat' using 1:3 with lines color green title "omega(t)"
+
