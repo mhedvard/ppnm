@@ -8,4 +8,4 @@ set grid
 
 # Make plot
 plot 'PendRes.dat' using 1:2 with lines color blue title "theta(t)",\
-'PendRes.dat' us
+'PendRes.dat' using 1:3 with lines color green title "omega(t)"
