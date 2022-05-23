@@ -1,3 +1,5 @@
+all: Plot_gamma.png Plot_lngamma.png
+
 Plot_lngamma.png:plot_lngamma.ppl gamma_val.dat
 	pyxplot $<
 

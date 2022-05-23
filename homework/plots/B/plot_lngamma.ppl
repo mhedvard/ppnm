@@ -13,5 +13,5 @@ set output 'Plot_lngamma.png'
 
 
 # Make plot
-plot 'gamma_val.dat' using 1:3 with line color red title "gamma(x)",\
+plot 'gamma_val.dat' using 1:3 with line color red title "lngamma(x)",\
      'tabval.dat' using 1:3 with points pointtype 3 title "Table values"
