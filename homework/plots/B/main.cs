@@ -15,10 +15,9 @@ static class main{
 	}	
 
 	static double lngamma(double x){
-		if(x<=0) // Not defined for x<=0
-			return 0.0; 
-		double lngamma = (x-1/2)*Log(x)-x+1/2*Log(2*PI);
-		return lngamma;
+		if(x<0)	return Log(PI)-Log(Sin(PI*x))-Log(gamma(1-x));
+		if(x<9) return Log(gamma(x+1))-Log(x); 
+		return x*Log(x+1/(12*x-1/x/10))-x+Log(2*PI/x)/2;
 	}
  
 
