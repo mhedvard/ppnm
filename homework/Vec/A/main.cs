@@ -14,7 +14,7 @@ class main{
 		vecA.print("vecA =");
 		vecB.print("vecB =");
 		WriteLine($"a = {a}");
-		WriteLine(" ");
+		WriteLine("");
 
 		// Test of operatores
 		WriteLine("Test of operators part A");

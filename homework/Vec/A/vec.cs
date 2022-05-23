@@ -5,7 +5,7 @@ public class vec{
 	public double x,y,z;
 
 	//constructors:
-	public vec(){ x=y=z=0; }
+	public vec(){ x=y=z=0;}
 	public vec(double a,double b,double c){ 
 		x=a;
 		y=b;
@@ -30,7 +30,7 @@ public class vec{
 	//methods:
 	public void print(string s){
 		Write(s);
-		WriteLine($"{x} {y} {z}");
+		WriteLine($" {x} {y} {z}");
 	}
 
 	public void print(string s, string t){
