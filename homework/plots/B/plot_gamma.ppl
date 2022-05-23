@@ -9,7 +9,7 @@ set grid
 set xrange [-5:5]
 set yrange [-5:5]
 
-set output 'plot_gamma.png'
+set output 'Plot_gamma.png'
 
 
 # Make plot

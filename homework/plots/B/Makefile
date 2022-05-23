@@ -1,8 +1,14 @@
-gamma_val.dat : gammafunc.exe
-	mono gammafunc.exe > gamma_val.dat
+Plot_lngamma.png:plot_lngamma.ppl
+	pyxplot $<
 
-gammafunc.exe : gammafunc.cs
-	mcs gammafunc.cs
+Plot_gamma.png:plot_gamma.ppl
+	pyxplot $<
 
-clean:                          # a phoney target, no dependencies
-	rm -f gamma_val.dat gammafunc.exe  # remove secondary file
+gamma_val.dat: main.exe
+	mono main.exe > gamma_val.dat
+
+main.exe: main.cs
+	mcs main.cs
+
+clean:
+	rm -f *.png *.exe gamma_val.dat
