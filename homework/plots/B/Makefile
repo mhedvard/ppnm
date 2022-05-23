@@ -1,7 +1,7 @@
-Plot_lngamma.png:plot_lngamma.ppl
+Plot_lngamma.png:plot_lngamma.ppl gamma_val.dat
 	pyxplot $<
 
-Plot_gamma.png:plot_gamma.ppl
+Plot_gamma.png:plot_gamma.ppl gamma_val.dat
 	pyxplot $<
 
 gamma_val.dat: main.exe
