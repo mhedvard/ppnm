@@ -43,13 +43,15 @@ public class vec{
 	}
 
 	// approx (Part C)
-	static bool approx(double a, double b, double tau=1e-9, double eps=1e-9){ // Approx for doubles 
+	static bool approx(double a, double b, double tau=1e-9, double eps=1e-9){ 
+		// Approx for doubles 
 		if (Abs(a-b) < tau || Abs(a-b)/(Abs(a)+Abs(b)) < eps)
 			return true;
 		return false;
 	}
 	
 	public bool approx(vec other){
+		// Approx for vectors
 		if (!approx(this.x, other.x) || !approx(this.y, other.y) || !approx(this.z, other.z))
 			return false;
 		return true;
