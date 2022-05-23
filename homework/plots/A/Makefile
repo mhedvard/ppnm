@@ -1,8 +1,11 @@
-'erf_val.dat : error_function.exe
-	mono error_function.exe > erf_val.dat
+plot.png:plot.ppl erf_val.dat
+	pyxplot $<
 
-error_function.exe : error_function.cs
-	mcs error_function.cs
+erf_val.dat: main.exe
+	mono main.exe > erf_val.dat
 
-clean:                          # a phoney target, no dependencies
-	rm -f erf_val.txt error_function.exe  # remove secondary file
+main.exe: main.cs
+	mcs main.cs
+
+clean:
+	rm -f *.dll *.exe *.png *.txt erf_val.dat
