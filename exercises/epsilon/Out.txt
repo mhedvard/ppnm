@@ -1,0 +1,14 @@
+My max int = 2147483647 should be equal 2147483647
+My min int = -2147483648 should be equal -2147483648
+my machine epsilon for double = 2.22044604925031E-16 should be approxomate 2.22044604925031E-16
+my machine epsilon for float = 1.192093E-07 should be approxomate 1.19209289550781E-07
+
+sumA-1 = 0.000000e+000 should be 1.110223e-010
+sumB-1 = 1.110223e-010 should be 1.110223e-010
+
+Test of approx function
+approx(1.1, 1.1) = True,  should be true
+approx(1.1, 1.2) = False,  should be false
+approx(1.1, 1.2, 0.5) = True,  should be true
+approx(1.1, 1.2, 0.01) = False,  should be false
+approx(1.1, 1.2, 0.01,0.5) = True,  should be true
