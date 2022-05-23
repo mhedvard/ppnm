@@ -11,7 +11,7 @@ class main{
 			foreach(var word in words){
 				double x = double.Parse(word);
 				WriteLine($"{x} {Sin(x)} {Cos(x)}");
-		        }
+			}
 		}
 	}
 }
