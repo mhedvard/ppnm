@@ -7,3 +7,6 @@ main.exe: main.cs table.dll
 
 table.dll: table.cs
 	mcs -target:library -out:table.dll table.cs
+
+clean:
+	rm *.dll *.exe [Oo]ut.txt
