@@ -5,8 +5,9 @@ set xlabel "x"
 set ylabel "erf(x)"
 set title "Error function"
 set output 'Plot_erf.png'
-set yrange [-1.5:1.5]
 
+set yrange [-1.5:1.5]
+set grid
 
 # Make plot
 plot 'erf_val.dat' with line title "erf(x)", 'tabval.dat' with points pointtype 3 title "table values"

@@ -14,7 +14,7 @@ static class main{
 	} 
 
 	static void  Main(){
-		for(double x =-3.50; x<=3.50; x+=0.01)
+		for(double x =-4; x<=4; x+=0.01)
 			WriteLine($"{x}	{erf(x)}");
 	}
 }
