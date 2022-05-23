@@ -1,4 +1,4 @@
-plot.png:plot.ppl erf_val.dat
+Plot_erf.png:plot.ppl erf_val.dat
 	pyxplot $<
 
 erf_val.dat: main.exe
