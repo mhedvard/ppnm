@@ -1,3 +1,5 @@
+Test of list using chain of nodes
 1
 2
 3
+Test OK

@@ -1,5 +1,9 @@
 public class list<T>{
-        public node<T> first=null,current=null;
+        public node<T> first,current;
+	public list(){
+	first =null; 
+	current = null; 
+	}
         public void push(T item){
                 if(first==null){
                         first=new node<T>(item);
