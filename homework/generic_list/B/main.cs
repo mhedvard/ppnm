@@ -19,9 +19,10 @@ class main{
 		for(int i=0; i<list.size;i++){
 			var numbers = list.data[i];
 			foreach(var number in numbers)
-				Write($"{number:e} ");
-			WriteLine();
+				Write($"{number} ");
+			WriteLine("");
 		}
+		WriteLine(""); 
 
 		/* Remove list n */
 		int i_remove = 1; // Index of list to remove
@@ -32,7 +33,7 @@ class main{
 		for(int i=0; i<list.size; i++){
 			var numbers = list.data[i];
 			foreach(var number in numbers)
-				Write($"{number:e} ");
+				Write($"{number} ");
 			WriteLine();
 		}
 		
