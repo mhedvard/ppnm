@@ -1,4 +1,4 @@
-plot.png:plot.ppl results.dat
+Plot.png:plot.ppl results.dat
 	pyxplot $<
 
 
@@ -16,4 +16,4 @@ vector.dll:vector.cs
 
 
 clean:
-	$(RM) *.dll *.exe *.png *.txt log*
+	$(RM) *.dll *.exe *.png *.txt *.dat
