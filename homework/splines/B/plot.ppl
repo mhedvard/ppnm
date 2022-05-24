@@ -3,7 +3,7 @@ set terminal png
 
 set xlabel "x"
 set grid 
-
+set yrange [-5:*]
 
 # Make plot 1
 set output 'Plot_1.png'
