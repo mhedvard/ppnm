@@ -1,0 +1,10 @@
+# Setup plot 
+set terminal png
+
+set xlabel "z"
+set title "Error function" 
+set output 'Plot_erf.png'
+set grid
+
+# Make plot
+plot 'erf.dat' title "erf(z)"

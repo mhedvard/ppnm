@@ -1,7 +1,7 @@
-all:Out.txt
-	cat Out.txt
+Plot_erf.png:plot.ppl erf.dat
+	pyxplot $<
 
-Out.txt:main.exe
+Out.txt erf.dat:main.exe
 	mono main.exe > Out.txt
 
 main.exe:main.cs integrate.dll
@@ -9,3 +9,6 @@ main.exe:main.cs integrate.dll
 
 integrate.dll:integrate.cs
 	mcs -target:library $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
+
+clean:
+	rm -f *.dll *.exe *.txt *.dat
