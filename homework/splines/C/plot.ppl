@@ -14,5 +14,5 @@ plot \
 'result.dat' index 0 title "Points",\
 'result.dat' index 1 using 1:2 with line color black title "cs - my implementation",\
 f(x) with line color red title "cs - pyxplot",\
-'result.dat' index 1 using 1:2 with line lt 2 color black title "diff - my implementation",\
-'result.dat' index 1 using 1:2 with line lt 3 color black title "int - my implementation"
+'result.dat' index 1 using 1:3 with line lt 2 color black title "diff - my implementation",\
+'result.dat' index 1 using 1:4 with line lt 3 color black title "int - my implementation"
