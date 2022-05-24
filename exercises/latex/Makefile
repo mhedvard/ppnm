@@ -1,4 +1,6 @@
-Report.pdf:report.txt ex_plot.png
+all:report.pdf
+
+report.pdf:report.txt ex_plot.png
 	pdflatex $<
 	pdflatex $<
 
