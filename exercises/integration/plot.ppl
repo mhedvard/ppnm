@@ -7,4 +7,4 @@ set output 'Plot_erf.png'
 set grid
 
 # Make plot
-plot 'erf.dat' title "erf(z)"
+plot 'erf.dat' with line title "erf(z)"
