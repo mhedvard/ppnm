@@ -9,38 +9,7 @@ class main{
 
 		for(int i = 0; i < x.Length; i++){
 			x[i] = i+1;
-			y[i] = 1;	
-			WriteLine($"{x[i]}	{y[i]}");
-		} 
-		WriteLine("");
-		WriteLine("");
-
-		calspline(x,y);
-
-		for(int i = 0; i < x.Length; i++){
-			x[i] = i+1;
-			y[i] = x[i];	
-			WriteLine($"{x[i]}	{y[i]}");
-		} 
-		WriteLine("");
-		WriteLine("");
-
-		calspline(x,y);
-
-		for(int i = 0; i < x.Length; i++){
-			x[i] = i+1;
-			y[i] = Pow(x[i],2);	
-			WriteLine($"{x[i]}	{y[i]}");
-		} 
-		WriteLine("");
-		WriteLine("");
-
-		calspline(x,y);
-
-
-		for(int i = 0; i < x.Length; i++){
-			x[i] = i+1;
-			y[i] = Pow(x[i],3);	
+			y[i] = Sin(x[i]);	
 			WriteLine($"{x[i]}	{y[i]}");
 		} 
 		WriteLine("");
@@ -50,9 +19,9 @@ class main{
 	}
 
 	static void calspline(double[] x,double[] y){
-		var qs = new qspline(x,y);
+		var cs = new cspline(x,y);
 		for(double z = x[0]; z<= x[x.Length-1]; z+=0.1)
-			WriteLine($" {z}	{qs.spline(z)}	{qs.derivative(z)}	{qs.integral(z)}"	);
+			WriteLine($" {z}	{cs.spline(z)}	{cs.derivative(z)}	{cs.integral(z)}"	);
 		WriteLine("");
 		WriteLine("");
 	}

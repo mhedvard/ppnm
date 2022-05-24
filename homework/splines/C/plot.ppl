@@ -5,35 +5,12 @@ set xlabel "x"
 set grid 
 
 
-# Make plot 1
-set output 'plot_1.png'
-plot 'result.dat' index 0 title "yi=1, data points", \
-'result.dat' index 1 using 1:2 with line title "y(x), quadratic spline",\
-'result.dat' index 1 using 1:3 with line title "Derivative",\
-'result.dat' index 1 using 1:4 with line title "Integral from x0 to x"
+# Make spline in pyxplot
+spline f() 'result.dat' index 0 
 
-
-# Make plot 2
-set output 'plot_2.png'
-plot 'result.dat' index 2 title "yi=xi, data points", \
-'result.dat' index 3 using 1:2 with line title "y(x), quadratic spline",\
-'result.dat' index 3 using 1:3 with line title "Derivative",\
-'result.dat' index 3 using 1:4 with line title "Integral from x0 to x"
-
-
-# Make plot 3
-set output 'plot_3.png'
-plot 'result.dat' index 4 title "yi=xi*xi, data points", \
-'result.dat' index 5 using 1:2 with line title "y(x), quadratic spline",\
-'result.dat' index 5 using 1:3 with line title "Derivative",\
-'result.dat' index 5 using 1:4 with line title "Integral from x0 to x"
-
-# Make plot 4
-set output 'plot_4.png'
-plot 'result.dat' index 6 title "yi=xi*xi*xi, data points", \
-'result.dat' index 7 using 1:2 with line title "y(x), quadratic spline",\
-'result.dat' index 7 using 1:3 with line title "Derivative",\
-'result.dat' index 7 using 1:4 with line title "Integral from x0 to x"
-
-
-
+# Make plot 
+set output 'Plot.png'
+plot \
+'result.dat' index 0 title "Points",\
+'result.dat' index 1 using 1:2 with line title "cs - my implematation",\
+f(x) with line title "cs - pyxplot"
