@@ -1,4 +1,4 @@
-plot.png:plot.ppl result.dat
+Plot.png:plot.ppl result.dat
 	pyxplot $<
 
 result.dat:main.exe

@@ -3,7 +3,7 @@ set terminal png
 
 set xlabel "x"
 set grid 
-
+set title "Cubic spline" 
 
 # Make spline in pyxplot
 spline f() 'result.dat' index 0 

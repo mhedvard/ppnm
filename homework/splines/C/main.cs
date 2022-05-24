@@ -4,11 +4,11 @@ using static System.Math;
 
 class main{
 	static void Main(){
-		var x = new double[5]; 
-		var y = new double[5];
+		var x = new double[7]; 
+		var y = new double[7];
 
 		for(int i = 0; i < x.Length; i++){
-			x[i] = i+1;
+			x[i] = i;
 			y[i] = Sin(x[i]);	
 			WriteLine($"{x[i]}	{y[i]}");
 		} 
