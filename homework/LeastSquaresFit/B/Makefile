@@ -1,7 +1,7 @@
 Plot.png:plot.ppl results.dat
 	pyxplot $<
 
-results.dat:main.exe
+results.dat Out.txt:main.exe
 	mono main.exe > results.dat
 
 main.exe:main.cs matrix.dll QRGS.dll lsfit.dll vector.dll
@@ -20,4 +20,4 @@ vector.dll:vector.cs
 	mcs -target:library $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
 
 clean:
-	$(RM) *.dll *.exe *.png *.txt *.dat log*
+	$(RM) *.dll *.exe *.png *.txt *.dat

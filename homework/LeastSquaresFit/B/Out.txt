@@ -1,6 +1,6 @@
 Half-Life time of ThX
 
 Modern value: 3.6
-Calculated value: 4.04828189712487
-Calculated Limits: [3.95029949449258 4.15124859933409]
+Calculated value: 4.02826740426001
+Calculated Limits: [3.9361002077492 4.12485444476282]
 Modern value does not agree with the calculated limit
