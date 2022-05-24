@@ -4,8 +4,8 @@ using static System.Math;
 
 class main{
 	static void Main(){
-		var x = new double[7]; 
-		var y = new double[7];
+		var x = new double[8]; 
+		var y = new double[8];
 
 		for(int i = 0; i < x.Length; i++){
 			x[i] = i;
