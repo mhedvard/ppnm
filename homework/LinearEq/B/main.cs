@@ -19,17 +19,20 @@ class main{
 
 		WriteLine("Matrix A:");
 		A.print();
+		WriteLine("");
 
 		WriteLine("Inverse of matrix A.");
 		QRGS qrgs = new QRGS(A);
 		var B = qrgs.inverse(); 
 		WriteLine("B = A^-1 :");
 		B.print();
+		WriteLine("");
  
 	
 		WriteLine("Test that AB =I:");
 		var AB = A*B;
 		AB.print();
+		WriteLine("");
 
 		WriteLine("");
 		WriteLine("Calculate determinant of A:");

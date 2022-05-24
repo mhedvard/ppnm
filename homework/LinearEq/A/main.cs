@@ -23,8 +23,10 @@ class main{
 
 		WriteLine("Matrix A:");
 		A.print();
-		WriteLine("Vector B:");
+		WriteLine("");
+		WriteLine("Vector b:");
 		b.print();
+		WriteLine("");
 
 		WriteLine("Factorize A into QR.");
 		QRGS qrgs = new QRGS(A);
@@ -34,22 +36,29 @@ class main{
 		R.print(); 
 		WriteLine("Orthogonal matrix Q:");
 		Q.print();
+		WriteLine("");
+
 		WriteLine("Test that Q^T*Q =I:");
 		var QTQ = Q.T*Q;
 		QTQ.print();
+		WriteLine("");
 
 		WriteLine("Test that QR - A = [0]:");
 		var QRA = Q*R-A;
 		QRA.print();
+		WriteLine("");
 
 		
 		WriteLine("Solve QRx = b.");
 		var x = qrgs.solve(b);
 		WriteLine("Result for x:");
 		x.print();
+		WriteLine("");
 
 		WriteLine("Check Ax = b.");
 		var Ax = A*x;
+		WriteLine("");
+	
 		WriteLine("Result for Ax:");
 		Ax.print(); 
 		WriteLine("Vextor b:");
