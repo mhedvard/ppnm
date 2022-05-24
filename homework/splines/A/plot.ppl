@@ -2,7 +2,7 @@
 set terminal png
 
 set xlabel "x"
-set output 'plot.png'
+set output 'Plot.png'
 
 
 # Make plot
