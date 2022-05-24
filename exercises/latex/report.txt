@@ -1,7 +1,8 @@
 \documentclass[a4paper]{article}
 \usepackage{graphicx}
-\usepackage{listings}
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{caption}
 
 \begin{document}
 \title{Exponetial function}
@@ -21,7 +22,7 @@ The exponential function normally denoted as:
 \end{equation}
 
 The exponential function can be reperecented using a power series \footnote{\url{https://en.wikipedia.org/wiki/Exponential_function}}: 
-\begin{equation}\label{eq:pow}
+\begin{equation} \label{eq:pow}
 	e^x = \sum_{k = 0}^{\infty} \frac{x^k}{k!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \cdots .
 \end{equation}
 This reprecentation only uses which only uses multiplications and divisions.
@@ -46,13 +47,13 @@ if $x>1/8$ the function the function calls itself but with a smaller agument, wi
 At last if $0<=x<=1/8$ then a revritten version of the power function repecentation of the exponential function is called. 
 
 \section{Results}
-In figure~(\ref{fig:ex_plot}) are plottet trogether with results from the power function reprecentation equation~(\ref{eq:pow}). 
-\begin{figure}
+\begin{figure} 
+	\label{fig_ex_plot}
 	\centering
 	\includegraphics[width=1\textwidth]{ex_plot.png}
 	\caption{Exponential function plottet togeter with the power funtion reprecentation.}
-	\label{fig:ex_plot}
 \end{figure}
+In figure ~\ref{fig_ex_plot} are plottet trogether with results from the power function reprecentation equation \ref{eq:pow}. 
 
 
 \end{document}

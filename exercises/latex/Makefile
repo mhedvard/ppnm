@@ -1,5 +1,6 @@
 Report.pdf:report.txt ex_plot.png
 	pdflatex $<
+	pdflatex $<
 
 ex_plot.png:ex_plot.ppl ex.dat
 	pyxplot $<
