@@ -7,7 +7,7 @@ class main{
 		// Data
 		var t = new vector(new double[] {1,  2,  3, 4, 6, 9,   10,  13,  15});
 		var y = new vector(new double[] {117,100,88,72,53,29.5,25.2,15.2,11.1}); 
-		var dy = new vector(new double[] {5,5,5,5,5,5,1,1,1,1});
+		var dy = new vector(new double[] {5,5,5,5,5,1,1,1,1});
 		
 		//Function 
 		var fs = new Func<double,double>[]{x => 1.0, x => -x};

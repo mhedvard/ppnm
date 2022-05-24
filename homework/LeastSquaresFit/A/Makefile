@@ -20,4 +20,4 @@ vector.dll:vector.cs
 	mcs -target:library $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
 
 clean:
-	$(RM) *.dll *.exe *.png *.txt *.dat log*
+	$(RM) *.dll *.exe *.png *.txt *.dat
