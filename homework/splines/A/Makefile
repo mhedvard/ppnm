@@ -16,4 +16,4 @@ vector.dll:vector.cs
 
 
 clean:
-	$(RM) *.dll *.exe *.png *.txt *.dat log*
+	$(RM) *.dll *.exe *.png *.txt *.dat
