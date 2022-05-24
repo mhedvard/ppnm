@@ -1,6 +1,4 @@
-all:report.pdf
-
-report.pdf:report.txt ex_plot.png
+Report.pdf:report.txt ex_plot.png
 	pdflatex $<
 
 ex_plot.png:ex_plot.ppl ex.dat
@@ -13,3 +11,5 @@ main.exe:main.cs
 	mcs main.cs
 
 
+clean:
+	rm -f *.dll *.exe  *.dat *.pdf *.aux *.png *.log *.out
