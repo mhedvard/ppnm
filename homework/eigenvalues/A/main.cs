@@ -14,7 +14,7 @@ class main{
 				A[j,i] = A[i,j];
 			}
 		}
-		matrix D = A.copy(); 		
+		matrix D = A.copy();
 
 		A.print("Matrix used for the test");		
 		

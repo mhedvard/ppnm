@@ -29,8 +29,7 @@ public class jacobi{
 
 	static public (vector,matrix) cyclic(matrix A){
 		int n = A.size1;
-		var V = matrix.id(n); 
-		V.print("I"); 
+		var V = matrix.id(n);  
 		bool changed;
 		do{
 			changed=false;
