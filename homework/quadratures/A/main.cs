@@ -15,7 +15,7 @@ class main{
 		
 		//Test of error function
 		StreamWriter erfVal = new StreamWriter("erf.dat"); 
-		for(double z =-3; z<=3; z+=0.1)
+		for(double z =-4; z<=4; z+=0.1)
 			erfVal.WriteLine($"{z}	{erf(z)}"); 
 		erfVal.Close(); 
 
