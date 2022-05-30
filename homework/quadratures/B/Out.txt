@@ -1,0 +1,12 @@
+Integral of sqrt(x) form 0 to 1 = 0.666953909054655 (Should give 2/3), nuber of evalutions used: 16
+ccIntegral of sqrt(x) form 0 to 1 = 0.666651128056607 (Should give 2/3), nuber of evalutions used: 28
+
+Integral of 1/sqrt(x) form 0 to 1 = 1.99996150007805 (Should give 2), nuber of evalutions used: 8568
+ccIntegral of 1/sqrt(x) form 0 to 1 = 1.99999201046432 (Should give 2), nuber of evalutions used: 16
+
+Integral of 4*sqrt(1-x^2) form 0 to 1 = 3.14183457802727 (Should give pi), nuber of evalutions used: 28
+ccIntegral of 4*sqrt(1-x^2) form 0 to 1 = 3.1415763864835 (Should give pi), nuber of evalutions used: 44
+
+Integral of ln(x)/sqrt(x) form 0 to 1 = -3.99991705899915 (Should give 2/3), nuber of evalutions used: 8608
+ccIntegral of ln(x)/sqrt(x) form 0 to 1 = -3.99987385646141 (Should give 2/3), nuber of evalutions used: 96
+
