@@ -1,0 +1,12 @@
+# Setup plot occialtion 
+set terminal png
+
+set xlabel "x"
+set ylabel "erf(x)"
+set title "Error function" 
+set output 'Plot_erf.png'
+set grid
+
+# Make plot
+plot 'erf.dat' with lines title "Numerical",\
+'erftab.dat' title "Table values"
