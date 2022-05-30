@@ -48,9 +48,9 @@ class main{
 		eval = 0; 
 		WriteLine();
 
-		WriteLine($"Integral of ln(x)/sqrt(x) form 0 to 1 = {Integrate(f4,0,1)} (Should give 2/3), nuber of evalutions used: {eval}"); 
+		WriteLine($"Integral of ln(x)/sqrt(x) form 0 to 1 = {Integrate(f4,0,1)} (Should give -4), nuber of evalutions used: {eval}"); 
 		eval = 0; 
-		WriteLine($"ccIntegral of ln(x)/sqrt(x) form 0 to 1 = {ccIntegrate(f4,0,1)} (Should give 2/3), nuber of evalutions used: {eval}"); 
+		WriteLine($"ccIntegral of ln(x)/sqrt(x) form 0 to 1 = {ccIntegrate(f4,0,1)} (Should give -4), nuber of evalutions used: {eval}"); 
 		eval = 0; 
 		WriteLine();
 
