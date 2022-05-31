@@ -1,0 +1,24 @@
+Test of sin(x)*cos(y)
+
+The integral sin(x)*sin(y) from (-pi,-pi) to (pi,pi) = -2.29089697582498 (expexted to be 0)
+The number of point used N = 10
+The error estimate error = 5.51362823780625
+
+Increase the number of points
+The integral sin(x)*sin(y) from (-pi,-pi) to (pi,pi) = -0.700048306116369 (expexted to be 0)
+The number of point used N = 1000
+The error estimate error = 0.619345752977769
+
+Increase the number of points
+The integral sin(x)*sin(y) from (-pi,-pi) to (pi,pi) = 0.078025716330756 (expexted to be 0)
+The number of point used N = 100000
+The error estimate error = 0.0624088879273294
+
+
+---------------------------------------------
+
+Test of 1/(pi^3*[1-cos(x)cos(y)cos(z)])
+The integral 1/(pi^3*[1-cos(x)cos(y)cos(z)]) from (0,0,0) to (pi,pi,pi) = 1.37636915607985 (expexted to be 1.3932)
+The number of point used N = 1000000
+The error estimate error = 0.00487630896146392
+
