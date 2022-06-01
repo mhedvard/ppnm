@@ -1,0 +1,53 @@
+The integral sin(x)*sin(y) from (-pi,-pi) to (pi,pi) (expexted to be 0)
+
+The number of point used N = 10
+Using plain montecarlo: (-14.2867264164267, 5.69081707305541) (result, error)
+Using plain montecarlo: (-7.81382376175728, 5.56184832982869) (result, error)
+
+The number of point used N = 100
+Using plain montecarlo: (1.90926378919519, 2.05066938278456) (result, error)
+Using plain montecarlo: (-0.293925287853376, 1.98855294214045) (result, error)
+
+The number of point used N = 1000
+Using plain montecarlo: (-1.39672371010208, 0.634217171326751) (result, error)
+Using plain montecarlo: (-0.0507046940746725, 0.624713390013846) (result, error)
+
+The number of point used N = 10000
+Using plain montecarlo: (0.251003513974651, 0.198578456693451) (result, error)
+Using plain montecarlo: (-0.0060696389156801, 0.19743094354864) (result, error)
+
+The number of point used N = 100000
+Using plain montecarlo: (0.0241079491557399, 0.0624396593165431) (result, error)
+Using plain montecarlo: (-0.000831477983812074, 0.0624195374462979) (result, error)
+
+The number of point used N = 1000000
+Using plain montecarlo: (0.00945674280147872, 0.0197551231828712) (result, error)
+Using plain montecarlo: (-4.60605558053715E-05, 0.0197391789661472) (result, error)
+
+----------------------------------------------------------
+The integral 1/(pi^3*[1-cos(x)cos(y)cos(z)]) from (0,0,0) to (pi,pi,pi) (expexted to be 1.3932)
+
+The number of point used N = 10
+Using plain montecarlo: (1.21683747090003, 0.266408148824177) (result, error)
+Using plain montecarlo: (1.18791622646313, 0.0715467592189546) (result, error)
+
+The number of point used N = 100
+Using plain montecarlo: (1.39718271149348, 0.144009974406442) (result, error)
+Using plain montecarlo: (1.18550162458824, 0.0704047313603399) (result, error)
+
+The number of point used N = 1000
+Using plain montecarlo: (1.36456899968195, 0.0642483044751065) (result, error)
+Using plain montecarlo: (1.32097774385015, 0.0560266664449816) (result, error)
+
+The number of point used N = 10000
+Using plain montecarlo: (1.32978798148401, 0.0225831850222035) (result, error)
+Using plain montecarlo: (1.37859648500205, 0.0434452152464984) (result, error)
+
+The number of point used N = 100000
+Using plain montecarlo: (1.37258843505541, 0.0157716687014778) (result, error)
+Using plain montecarlo: (1.37920577018867, 0.0138163919193803) (result, error)
+
+The number of point used N = 1000000
+Using plain montecarlo: (1.38827494080166, 0.0061798599883507) (result, error)
+Using plain montecarlo: (1.39064511682198, 0.0105249860465345) (result, error)
+
