@@ -5,7 +5,6 @@ using static System.Math;
 public class akima{
 	double[] Sm, x, y, dx, dy, p, w;
 	public akima(double[] xs, double[] ys){
-		WriteLine("test0");
 		if(xs.Length != ys.Length)
 			throw new Exception("The number of x and y values must be the same.");
 		int n = xs.Length;  //Number of points
@@ -17,15 +16,13 @@ public class akima{
 		Sm = new double[n];
 		p = new double[n-1];
 		w = new double[n-1];
-
-		WriteLine("test1");
+	
 		for(int i = 0; i<n ; i++){
 			x[i] = xs[i]; 
 			y[i] = ys[i];
 		}
 
 
-		WriteLine("test2");
 
 		for(int i = 0; i < n-1; i++){
 		dx[i] = x[i+1] - x[i];
@@ -38,7 +35,6 @@ public class akima{
 		w[0] = 0; //w0 does not exist. Here w[0] is made to make index notation easy programing
 		for(int i = 1; i<n-1; i++) w[i] =  Abs(p[i]-p[i-1]);
 
-		WriteLine("test3");
 		Sm[0] = p[0];
 		Sm[1] = 0.5*p[1]; 
 		
@@ -48,8 +44,6 @@ public class akima{
 		}
 		Sm[n-2] = 0.5*p[n-2] - 0.5*p[n-3];
 		Sm[n-1] = p[n-2];
-
-		WriteLine("test4");
 	}
 
 	public double getS(double z){
