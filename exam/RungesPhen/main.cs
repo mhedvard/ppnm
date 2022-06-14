@@ -15,8 +15,7 @@ class main{
 			y[i] = 1/(1+25*x[i]*x[i]);
 		}
 		
-		var subs = new akima(x,y);	
-		var cs = new cspline(x,y); 
+		var subs = new akima(x,y); 
 		
 		var sw = new StreamWriter("RungesPhen.dat"); 
 		for(int i = 0; i < x.Length; i++)
@@ -25,13 +24,7 @@ class main{
 		sw.WriteLine("");		
 
 		for(double xp = x[0]; xp < x[x.Length-1]; xp+=0.1){
-			sw.WriteLine($"{xp}	{subs.getS(xp)}");
-		}
-		sw.WriteLine("");
-		sw.WriteLine("");		
-
-		for(double xp = x[0]; xp < x[x.Length-1]; xp+=0.1){
-			sw.WriteLine($"{xp}	{cs.spline(xp)}");
+			sw.WriteLine($"{xp}	{subs.getS(xp)}	{polyInt.P(x,y,xp)}");
 		}
 		sw.Close(); 
 	}
