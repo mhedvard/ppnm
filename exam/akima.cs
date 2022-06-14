@@ -3,7 +3,7 @@ using static System.Console;
 using static System.Math;
 
 public class akima{
-	double[] Sm, x, y, dx, dy, p, w;
+	double[] x, y, a, b, c, d;
 	public akima(double[] xs, double[] ys){
 		if(xs.Length != ys.Length)
 			throw new Exception("The number of x and y values must be the same.");
@@ -11,11 +11,16 @@ public class akima{
 		
 		x = new double[n];
 		y = new double[n];
-		dx = new double[n-1];
-		dy = new double[n-1];
-		Sm = new double[n];
-		p = new double[n-1];
-		w = new double[n-1];
+		var dx = new double[n-1];
+		var dy = new double[n-1];
+		var Sm = new double[n];
+		var p = new double[n-1];
+		var w = new double[n-1];
+		a = new double[n-1];
+		b = new double[n-1];
+		c = new double[n-1];
+		d = new double[n-1];
+
 	
 		for(int i = 0; i<n ; i++){
 			x[i] = xs[i]; 
@@ -44,18 +49,40 @@ public class akima{
 		}
 		Sm[n-2] = 0.5*p[n-2] - 0.5*p[n-3];
 		Sm[n-1] = p[n-2];
+
+		for(int i = 0; i<n-1; i++){
+			a[i] = y[i];
+			b[i] = Sm[i]; 
+			c[i] = (3*p[i]-2*Sm[i]-Sm[i+1])/dx[i]; 
+			d[i] = (Sm[i]+Sm[i+1]-2*p[i])/(dx[i]*dx[i]);
+		}
 	}
 
 	public double getS(double z){
-		int i = binsearch(x,z);
-		double ai = y[i];
-		double bi = Sm[i]; 
-		double ci = (3*p[i]-2*Sm[i]-Sm[i+1])/dx[i]; 
-		double di = (Sm[i]+Sm[i+1]-2*p[i])/(dx[i]*dx[i]);
-		return ai + bi*(z-x[i]) + ci*Pow((z-x[i]),2) + di*Pow((z-x[i]),3);  
+		int i = binsearch(z);
+		return a[i] + b[i]*(z-x[i]) + c[i]*Pow((z-x[i]),2) + d[i]*Pow((z-x[i]),3);  
+	}	
+	
+	public double derivative(double z){
+		int i = binsearch(z);
+		return b[i] +2 * c[i] *(z-x[i]) + 3 * d[i] * Pow(z-x[i],2);
+	}  
+
+	public double integral(double z) {
+		int j = binsearch(z); 
+		double val = 0; 
+		for(int i = 0; i < j; i++)
+			val +=  partint(i,x[i+1]);
+		val +=  partint(j,z);
+		return val;
 	}
 
-	public int binsearch(double[] x, double z){
+	double partint(int i, double z){ 
+		// integra of subpline fom xi to z
+		return (z-x[i])/12*(12*a[i] + 6*b[i]*(z-x[i]) + 4*c[i]*Pow(z-x[i],2) + 3*d[i] *Pow(z-x[i],3));
+	}
+
+	public int binsearch(double z){
 		/*Locate the idenx i for which x_i<=z<=x_(i+1)*/
 		int i = 0, j = x.Length-1;
 		

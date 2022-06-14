@@ -52,15 +52,6 @@ public class cspline {
 			c[i]=(-2*b[i]-b[i+1]+3*p[i])/h[i];
 			d[i]=(b[i]+b[i+1]-2*p[i])/Pow(h[i],2);
 		}
-
-
-		// Write out b, c, d values to file
-		var WriteBCval = new System.IO.StreamWriter("bcval.txt", append:true);
-		WriteBCval.WriteLine("b	c	d");	
-		for(int i = 0; i<(x.Length-1);i++)
-			WriteBCval.WriteLine($"{b[i]}	{c[i]}	{d[i]}");
-		WriteBCval.WriteLine("");
-		WriteBCval.Close();
 	}
 	
 	public double spline(double z){
