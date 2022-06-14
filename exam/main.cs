@@ -5,8 +5,8 @@ using static System.Math;
 
 class main{
 	static void Main(){
-		double[] x = {0,1,2,3,4,5,6}; 
-		double[] y = {0,1,1,0.5,-1,-1,0};
+		double[] x = {0,1,2,3,4,5}; 
+		double[] y = {-1,-1,-1,1,1,1};
 		
 		var subs = new akima(x,y);		
 
