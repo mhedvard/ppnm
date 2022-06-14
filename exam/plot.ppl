@@ -8,5 +8,6 @@ set output 'Plot.png'
 
 # Make plot
 plot 'Out.txt' index 0 title "data points", \
-'Out.txt' index 1 using 1:2 with line title "Akima"
+'Out.txt' index 1 using 1:2 with line title "Akima", \
+'Out.txt' index 2 using 1:2 with line title "Cubic Spline"
 
