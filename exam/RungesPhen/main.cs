@@ -23,7 +23,7 @@ class main{
 		sw.WriteLine("");
 		sw.WriteLine("");		
 
-		for(double xp = x[0]; xp < x[x.Length-1]; xp+=0.1){
+		for(double xp = x[0]; xp < x[x.Length-1]; xp+=0.01){
 			sw.WriteLine($"{xp}	{subs.getS(xp)}	{polyInt.P(x,y,xp)}");
 		}
 		sw.Close(); 
