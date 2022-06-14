@@ -41,13 +41,13 @@ public class akima{
 		for(int i = 1; i<n-1; i++) w[i] =  Abs(p[i]-p[i-1]);
 
 		Sm[0] = p[0];
-		Sm[1] = 0.5*p[1]; 
+		Sm[1] = 0.5*p[0]+0.5*p[1]; 
 		
 		for(int i = 2; i < n - 2; i++){
 			if(w[i+1] + w[i-1] == 0) Sm[i] = (p[i-1] + p[i])/2; 
 			else Sm[i] = (w[i+1]*p[i-1]+w[i-1]*p[i])/(w[i+1]+w[i-1]);
 		}
-		Sm[n-2] = 0.5*p[n-2] - 0.5*p[n-3];
+		Sm[n-2] = 0.5*p[n-2] + 0.5*p[n-3];
 		Sm[n-1] = p[n-2];
 
 		for(int i = 0; i<n-1; i++){
