@@ -1,7 +1,7 @@
-Plot.png:plot.ppl Out.txt
+Plot_Wiggle.png:plot.ppl testWiggle.dat
 	pyxplot $<
 
-Out.txt:main.exe
+Out.txt testWiggle.dat:main.exe
 	mono main.exe > Out.txt
 
 main.exe:main.cs akima.dll cspline.dll
