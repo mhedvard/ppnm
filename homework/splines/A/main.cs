@@ -2,7 +2,7 @@ using System;
 using static System.Console; 
 using static System.Math; 
 using static linterp; 
-// using vector;
+
 
 class main{
 	static void Main(){
