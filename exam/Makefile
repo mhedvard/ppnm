@@ -1,3 +1,6 @@
+Plot.png:plot.ppl Out.txt
+	pyxplot $<
+
 Out.txt:main.exe
 	mono main.exe > Out.txt
 
