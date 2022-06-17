@@ -1,0 +1,14 @@
+# Setup plot 
+set terminal png
+
+set xlabel "x"
+set ylabel "y" 
+set output 'Plot.png'
+
+
+# Make plot
+plot 'testAkima.dat' index 0 title "data points", \
+'testAkima.dat' index 1 using 1:2 with line title "Akima", \
+'testAkima.dat' index 1 using 1:3 with line title "Derivative",\
+'testAkima.dat' index 1 using 1:4 with line title "Integral"
+
