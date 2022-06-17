@@ -11,9 +11,9 @@ plot 'testAkima.dat' index 0 title "data points", \
 'testAkima.dat' index 1 using 1:2 with line color red title "Akima", \
 'testAkima.dat' index 1 using 1:3 with line color blue title "Derivative",\
 'testAkima.dat' index 1 using 1:4 with line color green title "Integral",\
-sin(x) with line linetype 2 color red title "sin(x)",\
-diff_dx(sin(x),x) with line linetype 2 linewidth 2 color blue title "sin(x)",\
-int_dx(sin(x),0,x) with line linetype 2 linewidth 2 color green title "sin(x)"
+sin(x) with line linetype 2 linewidth 2 color red,\
+diff_dx(sin(x),x) with line linetype 2 linewidth 2 color blue,\
+int_dx(sin(x),0,x) with line linetype 2 linewidth 2 color green 
 
 
 
