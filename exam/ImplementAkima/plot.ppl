@@ -4,7 +4,7 @@ set terminal png
 set xlabel "x"
 set ylabel "y" 
 set output 'Plot.png'
-
+set key outside
 
 # Make plot
 plot 'testAkima.dat' index 0 title "data points", \
