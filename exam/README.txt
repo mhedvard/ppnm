@@ -22,6 +22,6 @@ where the wiggles are seen for the cubic spline but not for the Akima sub-spline
 The cubic spline (cspline.cs) it taken from the homework splines.
 
 The solution for each part is shown in the Plot.png file. 
-The Out.txt file gives a short description of the case, and the points used is listed. 
-In the *.dat files the results are saved and are used to make the plots.   
+The Out.txt file gives a short description of the case, and the data points used are listed. 
+In the *.dat files the results are saved, and then used to make the plots.   
 
