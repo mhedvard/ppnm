@@ -1,11 +1,11 @@
 # Setup plot 
 set terminal png
 
-set title "Test of Wiggles"
+set title "Test of Wiggle"
 set xlabel "x"
 set ylabel "y" 
 set output 'Plot.png'
-
+set yrange  [-1.5:1.5]
 
 # Make plot
 plot 'Wiggles.dat' index 0 title "data points", \
