@@ -1,6 +1,7 @@
 using System; 
 using static System.Console; 
 
+// Polynomial interpolation
 public static class polyInt{
 	public static double P(double[] x, double[] y, double z)
 	{

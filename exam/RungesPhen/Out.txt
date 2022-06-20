@@ -1,4 +1,4 @@
-Investergation of Rounge's phenomenom for polynomial interpolation and Akima sub-spline.
+Investigation of Runge's phenomenon for polynomial interpolation and the Akima sub-spline.
 The test is made on the function 1/(1+25*x^2). The data point used:
 
 x	y

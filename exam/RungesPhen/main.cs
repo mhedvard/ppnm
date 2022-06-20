@@ -6,7 +6,7 @@ using System.IO;
 class main{
 	static void Main(){
 		////////////////////////////////////////////////////////////////
-		// Rounge's phenomenom for polynomial interpolation and Akima //
+		// Runge's phenomenom for polynomial interpolation and Akima //
 		////////////////////////////////////////////////////////////////
 		double[] x = {-5,-4,-3,-2,-1,1,2,3,4,5};
 		int np = x.Length; 
@@ -17,8 +17,8 @@ class main{
 		}
 
 
-		// Describtion of what is done to output file 
-		WriteLine("Investergation of Rounge's phenomenom for polynomial interpolation and Akima sub-spline.");
+		// Describtion of what is done to the output file 
+		WriteLine("Investigation of Runge's phenomenon for polynomial interpolation and the Akima sub-spline.");
 		WriteLine("The test is made on the function 1/(1+25*x^2). The data point used:");
 		WriteLine(); 
 		WriteLine("x	y");
