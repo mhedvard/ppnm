@@ -1,16 +1,14 @@
-The repository include 3 important folders: 
+The repository include 3 folders: 
 * Exercise 
 * Homework 
-* Exam project
+* Exam
 
-The test folders named test are made for myself to play with diffrent things. 
-They are not important, for the exam. Maybe the are deleted before tha exam. 
-
-For the homewoks each homework is divided into the 3 pars A, B and C. 
-
+The homewoks each homework is divided into the 3 parts A, B and C.
+(For some of the homeworks part C is not made, and the the C forlder will not exist for these) 
+ 
 
 /////////////////////////////////////////////////////
-////////  Notes for exercies/homeworks ////////////// 
+////////  Notes - Makefile ////////////////////////// 
 /////////////////////////////////////////////////////
 This section is most made as noted for myself, to remember how the code there is copyed multiple times works. 
 

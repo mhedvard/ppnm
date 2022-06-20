@@ -22,6 +22,6 @@ x	y
 9	0.412118485241757
 9.5	-0.0751511204618093
 
-From the interpolation the derivative and intergral (from 0 to x) is determind.
+From the Akima sub-splie methode the derivative and intergral (from 0 to x) is also determind.
 Remember that for the Akima-subsline the continuity of the second derevative is relaxed,
 to reduce wiggeling. Therefor the first derivative is not necessarily a smooth curve.
