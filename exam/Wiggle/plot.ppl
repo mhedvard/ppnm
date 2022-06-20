@@ -1,0 +1,14 @@
+# Setup plot 
+set terminal png
+
+set title "Test of Wiggles"
+set xlabel "x"
+set ylabel "y" 
+set output 'Plot.png'
+
+
+# Make plot
+plot 'Wiggles.dat' index 0 title "data points", \
+'Wiggles.dat' index 1 using 1:2 with line title "Akima", \
+'Wiggles.dat' index 1 using 1:3 with line title "Cubic"
+
