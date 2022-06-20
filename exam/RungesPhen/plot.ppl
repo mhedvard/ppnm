@@ -5,7 +5,7 @@ set title "Test of Runge's Phenomenon"
 set xlabel "x"
 set ylabel "y" 
 set output 'Plot.png'
-
+set grid
 
 # Make plot
 plot 'RungesPhen.dat' index 0 title "data points", \
