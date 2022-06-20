@@ -3,11 +3,13 @@ set terminal png
 
 set xlabel "x"
 set ylabel "y" 
+set title "Test of Implementation"
 set output 'Plot.png'
 set key outside
+set grid
 
 # Make plot
-plot 'testAkima.dat' index 0 title "data points", \
+plot 'testAkima.dat' index 0 title "Data points", \
 'testAkima.dat' index 1 using 1:2 with line color red title "Akima", \
 'testAkima.dat' index 1 using 1:3 with line color blue title "Derivative",\
 'testAkima.dat' index 1 using 1:4 with line color green title "Integral",\
