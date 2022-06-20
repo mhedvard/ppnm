@@ -5,16 +5,28 @@ using System.IO;
 
 class main{
 	static void Main(){
-		////////////////////////////////////////////////////
-		// Rounge's phenomenom for cubic spline and Akima //
-		////////////////////////////////////////////////////
-		double[] x = {-5,-4,-3,-2,-1,1,2,3,4,5}; 
-		double[] y = new double[x.Length];
+		////////////////////////////////////////////////////////////////
+		// Rounge's phenomenom for polynomial interpolation and Akima //
+		////////////////////////////////////////////////////////////////
+		double[] x = {-5,-4,-3,-2,-1,1,2,3,4,5};
+		int np = x.Length; 
+		double[] y = new double[np];
 
 		for(int i = 0; i < x.Length; i++){
 			y[i] = 1/(1+25*x[i]*x[i]);
 		}
-		
+
+
+		// Describtion of what is done to output file 
+		WriteLine("Investergation of Rounge's phenomenom for polynomial interpolation and Akima sub-spline.");
+		WriteLine("The test is made on the function 1/(1+25*x^2). The data point used:");
+		WriteLine(); 
+		WriteLine("x	y");
+		for(int i = 0; i<np; i++) 
+			WriteLine($"{x[i]}	{y[i]}");
+		WriteLine();
+
+		// Make interpolation
 		var subs = new akima(x,y); 
 		
 		var sw = new StreamWriter("RungesPhen.dat"); 

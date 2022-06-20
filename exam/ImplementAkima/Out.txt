@@ -1,4 +1,4 @@
-The Akima subspline is used to interpolate the function sin(x) using the datapoints:
+The Akima sub-spline is used to interpolate the function sin(x) using the data points:
 
 x	y
 0	0
@@ -22,6 +22,6 @@ x	y
 9	0.412118485241757
 9.5	-0.0751511204618093
 
-From the Akima sub-splie methode the derivative and intergral (from 0 to x) is also determind.
-Remember that for the Akima-subsline the continuity of the second derevative is relaxed,
-to reduce wiggeling. Therefor the first derivative is not necessarily a smooth curve.
+From the Akima sub-spline method the derivative and integral (from 0 to x) is also determined. 
+Remember that for the Akima sub-spline the continuity of the second derivative is relaxed, to reduce wiggling. 
+Therefore, the first derivative is not necessarily a smooth curve.

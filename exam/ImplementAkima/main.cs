@@ -15,18 +15,18 @@ class main{
 		}
 		
 		// Describtion of what is done to wtitten out in file
-		WriteLine("The Akima subspline is used to interpolate the function sin(x) using the datapoints:");
+		WriteLine("The Akima sub-spline is used to interpolate the function sin(x) using the data points:");
 		WriteLine(); 
 		WriteLine("x	y");
 		for(int i = 0; i<np; i++) 
 			WriteLine($"{x[i]}	{y[i]}");
 		WriteLine();
-		WriteLine("From the interpolation the derivative and intergral (from 0 to x) is determind.");
-		WriteLine("Remember that for the Akima-subsline the continuity of the second derevative is relaxed,");
-		WriteLine("to reduce wiggeling. Therefor the first derivative is not necessarily a smooth curve.");
+		WriteLine("From the Akima sub-spline method the derivative and integral (from 0 to x) is also determined. ");
+		WriteLine("Remember that for the Akima sub-spline the continuity of the second derivative is relaxed, to reduce wiggling. ");
+		WriteLine("Therefore, the first derivative is not necessarily a smooth curve.");
 
 
-		// Akima subspline +  derevertive and integral 
+		// Akima subspline + derevertive and integral 
 		var subs = new akima(x,y); 
 		
 		StreamWriter sw = new StreamWriter("testAkima.dat"); 
