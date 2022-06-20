@@ -5,6 +5,25 @@ The repository include 3 folders:
 
 The homewoks each homework is divided into the 3 parts A, B and C.
 (For some of the homeworks part C is not made, and the the C forlder will not exist for these) 
+
+
+Points for homework projects: 
+
+#	homework		A	B	C	Σ
+1	vec			6	3	1	10
+2	Input/Output		6	3	1	10
+3	generic list		6	3	1	10
+4	plots			6	3	 	9
+5	splines			6	3	1	10
+6	linear equations	6	3	1	10
+7	least-sqares		6	3	1	10
+8	eigenvalues		6	3	 	9
+9	ODE			6	3	 	9
+10	quadratures		6	3	 	9
+11	montecarlo		6	3	 	9
+
+Total Points: 105
+
  
 
 /////////////////////////////////////////////////////
