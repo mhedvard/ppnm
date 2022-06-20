@@ -6,6 +6,8 @@ set xlabel "x"
 set ylabel "y" 
 set output 'Plot.png'
 set yrange  [-1.5:1.5]
+set grid 
+set key right bottom
 
 # Make plot
 plot 'Wiggles.dat' index 0 title "data points", \
