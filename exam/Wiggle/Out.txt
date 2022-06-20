@@ -1,4 +1,4 @@
-The Akima subspline and the cubic spline is used to interpolate the datapoints:
+The Akima sub-spline and the cubic spline are used to interpolate the data points:
 
 x	y
 -5	-1

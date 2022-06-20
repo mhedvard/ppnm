@@ -5,14 +5,17 @@ using System.IO;
 
 class main{
 	static void Main(){
-		////////////////////////////////////////////////////
+		/////////////////////////////////////////////////
 		// Test for wiggles for cubic spline and Akima //
-		////////////////////////////////////////////////////
+		/////////////////////////////////////////////////
+
+		//Data points 
 		double[] x = {-5,-4,-3,-2,-1,1,2,3,4,5}; 
 		double[] y = {-1,-1,-1,-1,-1,1,1,1,1,1};
 		int np = x.Length;
+
 		// Describtion of what is done to wtitten out in file
-		WriteLine("The Akima subspline and the cubic spline is used to interpolate the datapoints:");
+		WriteLine("The Akima sub-spline and the cubic spline are used to interpolate the data points:");
 		WriteLine(); 
 		WriteLine("x	y");
 		for(int i = 0; i<np; i++) 
