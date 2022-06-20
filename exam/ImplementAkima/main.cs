@@ -14,7 +14,7 @@ class main{
 			y[i] = Sin(x[i]);
 		}
 		
-		// Describtion of what is done to wtitten out in file
+		// Describtion of what is done, wtitten in output file
 		WriteLine("The Akima sub-spline is used to interpolate the function sin(x) using the data points:");
 		WriteLine(); 
 		WriteLine("x	y");
