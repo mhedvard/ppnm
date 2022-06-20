@@ -8,6 +8,8 @@ class main{
 		////////////////////////////////////////////////////////////////
 		// Runge's phenomenom for polynomial interpolation and Akima //
 		////////////////////////////////////////////////////////////////
+		
+		//Data points
 		double[] x = {-5,-4,-3,-2,-1,1,2,3,4,5};
 		int np = x.Length; 
 		double[] y = new double[np];
