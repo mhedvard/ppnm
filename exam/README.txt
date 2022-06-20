@@ -19,7 +19,7 @@ The cubic spline will in some situations show wiggles.
 The sub-spline methods will typically try to minimize this. 
 The cubic spline and Akima sub-spline are tested against each other, 
 where the wiggles are seen for the cubic spline but not for the Akima sub-spline. 
-
+The cubic spline (cspline.cs) it taken from the homework splines.
 
 The solution for each part is shown in the Plot.png file. 
 The Out.txt file gives a short description of the case, and the points used is listed. 
